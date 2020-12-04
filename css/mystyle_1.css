@@ -1,0 +1,3327 @@
+*{
+			margin: 0;
+			padding: 0;
+		}
+/*전체사이즈랑 배경 뒷이미지*/
+
+		html,body{
+			width: 100%;
+			height: 100%;
+			background: url(../img/bg/bg_change_01.png) repeat-x;
+		    background-size: 600%;
+		}
+		body.scroll_stop{
+			overflow: hidden;
+		}
+
+/*배경이미지*/
+		#wrapper{
+			width: 600%;
+			height: 100%;
+			background: url(../img/bg/bg_change_02.png) no-repeat
+			left bottom ;
+			background-size: 100%;
+			position: absolute;
+			overflow: hidden;
+		}
+
+
+/*배경에 구름 움직임=============================================*/
+		.cloud_parent{
+			width: 600%;
+			height: 100%;
+			/*background-position: 100%;*/
+			position: absolute;	
+			overflow: hidden;
+			/*z-index: ;*/
+		}
+		.cloud{
+			width: 100%;
+			height: 100%;
+			position: absolute;	
+			background: url(../img/bg/cloud_01.png) 
+			no-repeat left top;
+			background-size: 100%;
+			animation: cloud 2000s infinite;
+		}
+		@keyframes cloud {
+			0%{left: 0;}
+			50%{left:50%;}
+			100%{left: 100% opacity:0.5;}
+		}
+/*섹션나누기=======================================================*/
+		#wrapper section{
+			width: 16.666%;
+			height: 100%;
+			position: absolute;
+			text-indent: -999999999px;
+			/*border:1px solid red;*/
+		}
+		#wrapper>section:nth-child(1){
+			left: 0%
+		}                                                      
+		#wrapper>section:nth-child(2){
+			left: 16.66667%
+		}
+		#wrapper>section:nth-child(3){
+			left: 33.33334%
+		}
+		#wrapper>section:nth-child(4){
+			left: 50.00001%
+		}
+		#wrapper>section:nth-child(5){
+			left: 66.66668%
+		}
+		#wrapper>section:nth-child(6){
+			left: 83.33335%;
+			overflow-y:hidden;
+		}
+
+/*<<네비 위치 밑 동작 구현>>*/
+/*네비 GNB==========================================================*/
+		nav#gnb{
+			width: 102px;
+			height: 618px;
+			position: fixed;
+			top:20%;
+			margin-left: 10px;
+			z-index: 999999;
+
+		}
+		#gnb li{
+			width: 102px;
+			height: 103px;
+			list-style: none;
+			z-index: 6;
+		}
+		#gnb a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-indent: -99999px;
+		}
+
+/*gnb애니메이션=========================================================*/
+		#gnb li:nth-child(1){
+			background: url(../img/nav/gnb/home.png) no-repeat;
+			animation:home 2s steps(6) infinite;
+		}
+		@keyframes home{
+			0%{}
+			100%{background-position: -612px;}
+		}
+		#gnb li:nth-child(2){
+			background: url(../img/nav/gnb/brand.png) no-repeat;
+			animation:brand 2s steps(6) infinite;
+		}
+		@keyframes brand{
+			0%{}
+			100%{background-position: -612px;}
+		}
+		#gnb li:nth-child(3){
+			background: url(../img/nav/gnb/wanna.png) no-repeat;
+			animation:wanna 2s steps(6) infinite;
+		}
+		@keyframes wanna{
+			0%{}
+			100%{background-position: -612px;}
+		}
+		#gnb li:nth-child(4){
+			background: url(../img/nav/gnb/event.png) no-repeat;
+			animation:let 2s steps(6) infinite;
+		}
+		@keyframes let{
+			0%{}
+			100%{background-position: -612px;}
+		}
+		#gnb li:nth-child(5){
+			background: url(../img/nav/gnb/review.png) no-repeat;
+			animation:beeauty 2s steps(6) infinite;
+		}
+		@keyframes beeauty{
+			0%{}
+			100%{background-position: -612px;}
+		}
+		#gnb li:nth-child(6){
+			background: url(../img/nav/gnb/cosmetic.png) no-repeat;
+			animation:talk 2s steps(6) infinite;
+		}
+		@keyframes talk{
+			0%{}
+			100%{background-position: -612px;}
+		}
+
+/*gnb 호버시========================================================*/
+		#gnb li:hover,#gnb li.active{
+			animation:none;
+			cursor: pointer;
+		}
+
+/*움직이는 벌===========================================================*/
+		#gnb div.bee{
+			width: 78px;
+			height: 54px;
+			position: relative;
+			top:-130px;
+			left: 70%;
+			z-index: -1
+		}
+		@keyframes bee{
+			0%{}
+			100%{background-position:-1794px;}
+		}
+		#gnb li:hover div.bee, #gnb li.active div.bee{
+            background: url(../img/nav/gnb/bee.png);
+            animation: bee 3s steps(23) infinite;
+        }
+		#gnb li:nth-child(1):hover, #gnb li:nth-child(1).active{
+			background: url(../img/nav/gnb/hover1.png) no-repeat;
+		}
+		#gnb li:nth-child(2):hover, #gnb li:nth-child(2).active{
+			background: url(../img/nav/gnb/hover2.png) no-repeat;
+		}
+
+ 		#gnb li:nth-child(3):hover, #gnb li:nth-child(3).active{
+			background: url(../img/nav/gnb/hover3.png) no-repeat;
+		}
+
+		#gnb li:nth-child(4):hover, #gnb li:nth-child(4).active{
+			background: url(../img/nav/gnb/hover4.png) no-repeat;
+		} 
+
+		#gnb li:nth-child(5):hover, #gnb li:nth-child(5).active{
+			background: url(../img/nav/gnb/hover6.png) no-repeat;
+		}
+
+		#gnb li:nth-child(6):hover, #gnb li:nth-child(6).active{
+			background: url(../img/nav/gnb/hover5.png) no-repeat;
+		}
+
+ /*gnb 액티브시==========================================================*/
+ 		#gnb li:active{
+ 			animation:none;
+ 		}
+ 		#gnb li:nth-child(1):active{
+			background: url(../img/nav/gnb/active1.png) no-repeat;
+		}
+		#gnb li:nth-child(2):active{
+			background: url(../img/nav/gnb/active2.png) no-repeat;
+		}
+		#gnb li:nth-child(3):active{
+			background: url(../img/nav/gnb/active3.png) no-repeat;
+		}
+		#gnb li:nth-child(4):active{
+			background: url(../img/nav/gnb/active4.png) no-repeat;
+		}
+		#gnb li:nth-child(5):active{
+			background: url(../img/nav/gnb/active6.png) no-repeat;
+		}
+		#gnb li:nth-child(6):active{
+			background: url(../img/nav/gnb/active5.png) no-repeat;
+		}
+		
+/*네비 lnb=============================================================*/
+		nav#lnb{
+			width: 1115px;
+			height:102px;
+			position: absolute;
+			background: url(../img/nav/lnb/board.png) no-repeat;
+			background-size: 100%;
+			left:50%;
+			margin-left: -557.5px;
+			top: 0;
+			z-index: 99999;
+			overflow: hidden;
+		}
+
+		#lnb li{
+			height: 101px;
+			list-style: none;
+			/*border:1px solid purple;*/
+			float: left;
+		}
+
+/*lnb li 위치잡기 ----------------------------------------------------------		*/
+		#lnb li:nth-child(1){
+			width: 238px;
+			background: url(../img/nav/lnb/nomal_01.png) no-repeat;
+		}
+			#lnb li:nth-child(2){
+			width: 203px;
+			background: url(../img/nav/lnb/nomal_02.png) no-repeat;
+		}
+			#lnb li:nth-child(3){
+			width: 206px;
+			background: url(../img/nav/lnb/logo.png) no-repeat;
+		}
+			#lnb li:nth-child(4){
+			position: relative;
+			left: -20px;
+			width: 145px;
+			background: url(../img/nav/lnb/nomal_04.png) no-repeat;
+		}
+			#lnb li:nth-child(5){
+			width: 150px;
+			position: relative;
+			left: -10px;
+			margin-left: 10px;
+			background: url(../img/nav/lnb/nomal_05.png) no-repeat;
+		}
+			#lnb li:nth-child(6){
+			width: 147px;
+			background: url(../img/nav/lnb/nomal_03.png) no-repeat;
+		}
+		#lnb a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-indent: -99999px;
+			position: absolute;	
+			}
+
+/*lnb 호버시 꿀떨어지는 거---------------------------------------------*/
+		#lnb div.honey{
+			width: 203px;
+			height: 101px;
+			position: absolute;
+			top: 0;
+			/*border:1px solid red;*/
+			z-index: -1
+		}
+        @keyframes honey{
+        	0%{}
+        	100%{background-position: -1015px;}
+        }
+        #lnb li:nth-child(1):hover div.honey{
+        	background: url(../img/nav/lnb/honey.png);
+        	margin-left:21px;
+        	/*border:1px solid*/ /*red;*/
+        	animation:honey 1s steps(5);
+        	animation-fill-mode: forwards;
+        }
+         #lnb li:nth-child(2):hover div.honey{
+        	background: url(../img/nav/lnb/honey.png);
+        	margin-left: -4px;
+        	/*border:1px solid*/ /*red;*/
+        	animation:honey 1s steps(5);
+        	animation-fill-mode: forwards;
+        }
+         #lnb li:nth-child(4):hover div.honey{
+        	background: url(../img/nav/lnb/honey.png);
+        	margin-left: -20px;
+        	/*border:1px solid*/ /*red;*/
+        	animation:honey 1s steps(5);
+        	animation-fill-mode: forwards;
+        }
+         #lnb li:nth-child(5):hover div.honey{
+        	background: url(../img/nav/lnb/honey.png);
+        	margin-left: -30px;
+        	/*border:1px solid*/ /*red;*/
+        	animation:honey 1s steps(5);
+        	animation-fill-mode: forwards;
+        }
+         #lnb li:nth-child(6):hover div.honey{
+        	background: url(../img/nav/lnb/honey.png);
+        	margin-left: -30px;
+        	/*border:1px solid*/ /*red;*/
+        	animation:honey 1s steps(5);
+        	animation-fill-mode: forwards;
+        }
+
+ /*lnb 호버시 글씨 색상변경-----------------------------------*/
+		#lnb li:hover{
+			cursor: pointer;
+			height: 135px;
+		}
+        #lnb li:nth-child(1):hover {
+			width: 238px;
+			background: url(../img/nav/lnb/hover_01.png) no-repeat;
+		}
+		 #lnb li:nth-child(2):hover {
+			width: 203px;
+			background: url(../img/nav/lnb/hover_02.png) no-repeat;
+		}
+		 #lnb li:nth-child(4):hover {
+			width: 145px;
+			background: url(../img/nav/lnb/hover_04.png) no-repeat;
+		}
+		 #lnb li:nth-child(5):hover {
+			width: 150px;
+			background: url(../img/nav/lnb/hover_05.png) no-repeat;
+		}
+		 #lnb li:nth-child(6):hover {
+			width: 147px;
+			background: url(../img/nav/lnb/hover_03.png) no-repeat;
+		}
+
+
+/*<<홈컨텐츠>>===================================================---------*/
+		#main_carousel_box{
+			width: 1000px;
+			height: 520px;
+			position: absolute;
+			/*left:22%;*/
+			left: 50%;
+			margin-left: -550px;	
+			bottom:200px;
+			z-index: 99;
+		}
+		#main_carousel{
+			width: 853px;
+			height: 100%;
+			position: absolute;
+			/*left:22%;*/
+			left: 50%;
+			margin-left: -426.5px;/	
+			/*overflow: hidden; */
+		}
+		#main_carousel ol.main_gallery{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			overflow:hidden;
+		}
+		#main_carousel ol.main_gallery li{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 100%;
+			display: block;
+			z-index:991; 
+		}
+		#main_carousel ol.main_gallery a{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: block;
+		}
+		#main_carousel ol.main_gallery li:nth-of-type(1){
+			background: url(../img/home/main_carousel_01.png) no-repeat center;
+			left: 0;
+		}
+		#main_carousel ol.main_gallery li:nth-of-type(2){
+			background: url(../img/home/main_carousel_02.png) no-repeat center;
+		}
+		#main_carousel ol.main_gallery li:nth-of-type(3){
+			background: url(../img/home/main_carousel_03.png) no-repeat center;	
+		}
+		#main_carousel ol.main_gallery li:nth-of-type(4){
+			background: url(../img/home/main_carousel_04.png) no-repeat center;
+		}
+
+/*메인캐로셀 좌우 버튼---------------------------------------------------*/
+		 #main_carousel_box .mlb{
+			width:60px;
+			height: 72px;
+			position: absolute;
+			top:45%;
+			color: white;
+			cursor: pointer;
+		 }
+		 #main_carousel_box .main_left_btn{
+			left:5px;
+			background: url(../img/home/main_carousel_button_02.png);
+		 }
+		 #main_carousel_box .main_right_btn{
+			right:5px;
+			background: url(../img/home/main_carousel_button_01.png);
+		 }
+
+
+/*메인캐릭터 -------------------------------------*/
+		.main_parent{
+			position: absolute;
+			width: 1800px;
+			left: 50%;
+			margin-left: 550px;
+			bottom: 250px;
+			z-index: 999;
+		/*	animation: a_main_cha 20s  ;
+		}
+		@keyframes a_main_cha {
+			0%{}
+			100%{opacity: 0;}*/
+		}	
+		.main_cha{
+			width: 207px;
+			height: 258px;
+			z-index: 99999;
+			background:url(../img/home/main_cha.png);
+			background-size:cover;
+			position: sticky;
+			left:1320px;
+			animation: main_cha 2s steps(12) infinite;
+		}
+		@keyframes main_cha {
+			0%{}
+			100%{background-position: -2484px;}
+		}
+
+
+/*스크롤 방향안내 ---------------------------------------------------*/
+		.scroll{
+			width: 102px;
+			height: 26px;
+			position: absolute;
+			background: url(../img/home/scroll_01.png) 
+			no-repeat;
+			left:50%;
+			margin-left: -51px;
+			bottom: 20px;
+			z-index: 999999;
+		    animation: home_scroll 2s steps(5) infinite;
+		}
+		@keyframes home_scroll {
+			0%{}
+			100%{background-position: -510px;}
+		}
+
+/*sns 버튼  ---------------------------------------------*/
+		.sns_box{
+			width: 90%;
+			height: 40px;
+			position: absolute;
+			top:40px;
+			left:3.5%;
+			/*border:1px solid red;*/
+		}
+		.sns_box .sns{
+			width: 37px;
+			height: 36px;
+			position: absolute;
+			cursor: pointer;
+			/*border:1px solid red;*/
+			display: block;
+			z-index: 999999;
+		}
+	   
+        .sns_box .sns1{
+			background: url(../img/home/sns_btn_01.png);
+			left: 0%;
+		}
+		.sns_box .sns2{
+			background: url(../img/home/sns_btn_02.png);
+			left: 5%;
+		}
+		.sns_box .sns3{
+			background: url(../img/home/sns_btn_03.png);
+			left: 10%;
+		}
+		.sns_box .rogin_bt{
+			background: url(../img/home/sns_btn_04.png);
+			right: 5%;
+		}	
+		.sns_box .main_cart{
+			background: url(../img/home/sns_btn_05.png);
+			right: 0%;
+		}
+
+/*sns 버튼 호버시 ---------------------------------------------*/
+		.sns_box .sns1:hover{
+			background: url(../img/home/sns_btn_hover_01.png);
+		}
+		.sns_box .sns2:hover{
+			background: url(../img/home/sns_btn_hover_02.png);
+			/*left: 55px;*/
+		}
+		.sns_box .sns3:hover{
+			background: url(../img/home/sns_btn_hover_03.png);
+			/*left: 110px;*/
+		}
+		.rogin_bt:hover{
+			background: url(../img/home/sns_btn_hover_04.png);
+		}
+		.main_cart:hover{
+			background: url(../img/home/sns_btn_hover_05.png);
+		}
+
+/*로그인 버튼 클릭시 뜨는 모달창 구현 ------------------------------*/
+		.login_modal_box{
+			width: 518px;
+			height: 647px;
+			position: absolute;
+			left: 50%;
+			margin-left: -282.5px;
+			top:50%;
+			margin-top: -323.5px;
+			z-index: 9999991;
+		}
+		.login_modal_box .login_modal{
+			width: 506px;
+			height: 100%;
+			position: absolute;
+			background:url(../img/home/login_board.png);
+		}
+		#login{
+			position: absolute;
+			width: 300px;
+			height: 30px;
+			top:42.5%;
+			left: 17%;
+			border-style: none;
+		}
+		#pas{
+			position: absolute;
+			width: 300px;
+			height: 30px;
+			top:55%;
+			left: 17%;
+			border-style: none;
+		}
+		.login_btn{
+			width: 101px;
+			height: 48px;
+			position: absolute;
+			bottom: 23%;
+			left: 50%;
+			margin-left: -50.5px;
+			background:url(../img/home/login_btn.png);
+			cursor: pointer;
+		}
+		.login_btn:hover{
+			background:url(../img/home/login_btn_hover.png);
+		}
+		.sign_up_btn{
+			width: 101px;
+			height: 48px;
+			position: absolute;
+			bottom: 6.5%;
+			left: 50%;
+			margin-left: -50.5px;
+			background:url(../img/home/sign_up_btn.png);
+			cursor: pointer;
+		}
+		.sign_up_btn:hover{
+			background:url(../img/home/sign_up_btn_hover.png);
+		}
+		.login_Xbtn{
+			width: 61px;
+			height: 33px;
+			position: absolute;
+			top:25%;
+			right: 0%;
+			background:url(../img/riview/review_modal_Xbtn.png);
+			cursor: pointer;
+		}
+		.login_Xbtn:hover{
+			background:url(../img/riview/review_modal_Xbtn_hover.png);
+		}
+
+
+/*-회원가입 폼----------------------------------------------------------*/
+
+		.main_sign_up_modal_box{
+			width: 518px;
+			height: 647px;
+			position: absolute;
+			left: 50%;
+			margin-left: -282.5px;
+			top:50%;
+			margin-top: -323.5px;
+			z-index: 9999999;
+		}
+		.main_sign_up_modal_box .main_sign_up_modal1{
+			width: 506px;
+			height: 100%;
+			position: absolute;
+			background:url(../img/home/sign_up_board.png);
+		}
+		.main_sign_up_modal2{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+
+		#id_check{
+			position: absolute;
+			width: 300px;
+			height: 25px;
+			top:34%;
+			left: 17%;
+			border-style: none;
+		}
+		#sign_up_pas{
+			position: absolute;
+			width: 350px;
+			height: 25px;
+			top:42.6%;
+			left: 17%;
+			font-size: 0.2em;
+			border-style: none;
+		}
+		#pas_re_check{
+			position: absolute;
+			width: 250px;
+			height: 25px;
+			top:51%;
+			left: 17%;
+			font-size: 0.2em;
+			border-style: none;
+		}
+		#overlap_check{
+			position: absolute;
+			width: 65px;
+			height: 30px;
+			top:50%;
+			left: 70%;
+			/*border-style: none;*/
+			cursor: pointer;
+		}
+		#phon_num{
+			position: absolute;
+			width: 200px;
+			height: 25px;
+			top:59.7%;
+			left: 17%;
+			border-style: none;
+		}
+		#email{
+			position: absolute;
+			width: 200px;
+			height: 25px;
+			top:72.9%;
+			left: 17%;
+			border-style: none;
+		}
+		#certification_e_mail{
+			position: absolute;
+			width: 65px;
+			height: 30px;
+			top:72.9%;
+			left: 70%;
+			/*border-style: none;*/
+			cursor: pointer;
+		}
+		#certification_tel{
+			position: absolute;
+			width: 65px;
+			height: 30px;
+			top:59.7%;
+			left: 70%;
+			/*border-style: none;*/
+			cursor: pointer;
+		}
+		#agree1{
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			top:64.4%;
+			left: 31%;
+		}
+		#agree2{
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			top:77.8%;
+			left: 33%;
+		}
+/*회원가입 버튼 클릭시 ------------------------*/
+		.sign_up_btn2{
+			width: 101px;
+			height: 48px;
+			position: absolute;
+			bottom: 6.5%;
+			left: 50%;
+			margin-left: -50.5px;
+			background:url(../img/home/sign_up_btn.png);
+			cursor: pointer;
+		}
+		.sign_up_btn2:hover{
+			background:url(../img/home/sign_up_btn_hover.png);
+		}
+/*x버튼 클릭시--------------------------------------*/
+		.sign_up_Xbtn{
+			width: 61px;
+			height: 33px;
+			position: absolute;
+			top:25%;
+			right: 0%;
+			background:url(../img/riview/review_modal_Xbtn.png);
+			cursor: pointer;
+		}
+		.sign_up_Xbtn:hover{
+			background:url(../img/riview/review_modal_Xbtn_hover.png);
+		}
+
+
+/*<<브랜드 컨텐츠>>========================-------------------------------*/
+		#wrapper>section:nth-child(2) .b_board{
+		/* 	border:1px solid red; */
+			width: 1991px;
+			height: 845px;
+			background: url(../img/brand/brand_board_02.png) center;
+			background-size: contain;
+			position: absolute;
+			left:50%;
+			margin-left: -860px;
+			bottom:0px;
+			z-index: 2;
+			}
+
+		 	#wrapper>section:nth-child(2) .nail_botton_01{
+/*			border:1px solid black;*/
+			width: 58px;
+			height: 31px;
+			background: url(../img/brand/carousel_botton.png);
+			position: absolute;
+			margin-left: 850px;
+			bottom:525px;
+			z-index: 999999999;
+			cursor: pointer;
+		}
+
+			div.burt_parent{
+			/*border:1px solid red;*/
+			width: 665px;
+			height: 675px;
+			position: absolute;
+			left:165.5%;
+			/*margin-left: 3190px;*/
+			bottom:0;
+			z-index: 9999;
+			overflow: hidden;
+		}
+
+		div.burt_parent .burt{
+			/*border:1px solid red;*/
+			width: 100%;
+			height: 100%;
+			background: url(../img/brand/burt_1.png) 
+			no-repeat left bottom;
+			background-size: 100%;
+			/*background-position: 100%;*/
+			position: absolute;
+			bottom:-100%;
+			left: -5px;
+			/*animation:up 3s  linear;*/
+		}
+		/*@keyframes up{
+			0%{bottom: -680%;}
+			100%{bottom :0%;}
+		}
+*/
+		div.brand_cha_parent{
+			/*border:1px solid red;*/
+			width:206px;
+			height:223px;
+			position: absolute;
+			left:168%;
+			/*margin-left: 3230px;*/
+			bottom:185px;
+			z-index: 9999;
+			opacity: 0;
+		}
+
+		div.brand_cha_parent .brand_cha{
+			width: 100%;
+			height: 100%;
+			bottom:-10px;
+			left: 0px;
+			position: absolute;
+			bottom:0px;
+			z-index: 999999;
+			background: url(../img/brand/brand_cha.png)
+			no-repeat left bottom;
+			animation:fly 3s steps(29) infinite;
+		}
+		@keyframes fly{
+			0%{}
+			100%{background-position: -5974px}
+			}
+
+		.brand_cursor{
+			width: 90px;
+			height: 58px;
+			position: absolute;
+			bottom:585px;
+			left: 50%;
+			margin-left: -50px;
+			background:url(../img/brand/brand_click_cursor.png); 
+			animation: brand_txt 2s  infinite;
+			}
+		@keyframes brand_txt{
+				0%{opacity:0 }
+				50%{opacity: 1}
+			}
+			
+		.brand_cursor2{
+			width: 78px;
+			height: 55px;
+			position: absolute;
+			/*border:1px solid red;*/
+			/*left: 28.5%;*/
+			left: 50%;
+			margin-left:20px;
+			z-index: 99999999;
+			bottom:620px;
+			background: url(../img/cosmetic/handcursor.png);
+			animation: coscursor 1s steps(5) infinite;
+			}
+		@keyframes coscursor{
+				0%{}
+				100%{background-position: -390px;}
+			} 
+		
+/*브랜드 캐로셀 -----------------------------------------*/
+		#brand_carousel_box{
+			width: 618px;
+			height: 500px;
+			position: absolute;
+			left:50%;
+			margin-left: -274px;
+			bottom:100px;
+			z-index: 91;
+		}
+
+		#brand_carousel_box #brand_carousel{
+			width: 100%;
+			height: 363px;
+			position: absolute;
+			/*border: 1px solid red;*/
+			left:0;
+			bottom:62px;
+			z-index: 99;
+			overflow: hidden; 
+		}
+
+		#brand_carousel ol.brand_gallery{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+
+		#brand_carousel ol.brand_gallery li{
+			width: 100%;
+			height: 362px;
+			position: absolute;
+			top:0;
+			left: 100%;
+			z-index: z-index: 991;
+			display: block;
+		}
+
+		#brand_carousel ol.brand_gallery li:nth-child(1){
+			background: url(../img/brand/brand_carousel_01_1.png) no-repeat center;
+			background-size: 107%;
+			left: 0;
+		}
+		#brand_carousel ol.brand_gallery li:nth-child(2){
+			background: url(../img/brand/brand_carousel_02_1.png) no-repeat center;
+			background-size: 107%;
+		}
+		#brand_carousel ol.brand_gallery li:nth-child(3){
+			background: url(../img/brand/brand_carousel_03_1.png) no-repeat center;	
+			background-size: 107%;
+		}
+		#brand_carousel ol.brand_gallery li:nth-child(4){
+			background: url(../img/brand/brand_carousel_04_1.png) no-repeat center;
+			background-size: 107%;
+		}
+		
+	    .brand_btn_set{
+	    	/*border: 1px solid blue;*/
+	    	position: absolute;
+	    	top:8%;
+	    	left: 29%;
+	    }
+
+	    .brand_btn_set li{
+	     	width: 58px;
+	     	height: 31px;
+	     	background: green;
+	     /*	border: 1px solid blue;*/  
+	     	background: url(../img/brand/carousel_botton.png);
+	     	float: left;
+	     	margin-left: 5px;
+	     	margin-right: 5px;
+	     	border-radius: 50%;
+			list-style: none;
+			cursor: pointer;
+	     }
+	     .brand_btn_set li.brand_active{
+	     	background: url(../img/brand/carousel_botton_hover.png);
+	     }
+
+	      .brand_btn_set li:hover{
+	      	background: url(../img/brand/carousel_botton_hover.png);
+	      }
+
+
+/*<<성분컨텐츠>> ---------------------------------------------------*/
+/*흔들리는 나무--------------------------------------------------	*/
+	#wrapper>section:nth-child(3) .shaking_tree{
+			width: 1239px;
+			height: 1312px;
+			position: absolute;
+			left:-25%;
+			/*margin-left:-1400px;*/
+			bottom: 40px;
+			z-index: 9999;
+			background: url(../img/ingridient/shaking_tree_01.png);
+			/*background-size: 100%;*/
+			animation: shakingtree 2s infinite;
+		}	
+		@keyframes shakingtree{
+			0%{background: url(../img/ingridient/shaking_tree_01.png);}
+			50%{background: url(../img/ingridient/shaking_tree_02.png);}
+		}
+
+/*메인과 서브 캐릭터 -------------------------------------------*/
+		#wrapper>section:nth-child(3) .ing_cha{
+			width: 269px;
+			height: 293px;
+			position: absolute;
+			left:73%;
+			/*margin-left:500px;*/
+			bottom: 130px;
+			z-index: 9991;
+			background: url(../img/ingridient/ing_cha_01.png);
+			/*background-size: 100%;*/	
+		}	
+		.ing_cha.on{
+			animation: ingcha 7.5s steps(40) forwards;
+		}
+		@keyframes ingcha{
+			0%{}
+			100%{background-position: -10760px;}
+		}
+
+		#wrapper>section:nth-child(3) .sub_ing_cha{
+			width: 207px;
+			height: 377px;
+			position: absolute;
+			left:10%;
+			/*margin-left:-800px;*/
+			bottom: 80px;
+			z-index: 99991;
+			background: url(../img/ingridient/sub_ing_cha_01.png);	
+			animation: sub_ing_cha 3s steps(10) infinite;
+		}
+		@keyframes sub_ing_cha{
+			0%{}
+			100%{background-position: -2070px;}
+		}
+/*자연물들--------------------------------------------------*/
+		#wrapper>section:nth-child(3) .pomeranate{
+		/*	border: 1px solid red;*/
+			width: 410px;
+			height: 296px;
+			border-radius: 20%;
+			position: absolute;
+			left:50%;
+			margin-left:-75px;
+			bottom: 170px;
+			z-index: 99;
+			background: url(../img/ingridient/pomeranate_01.png);
+			cursor: pointer;
+		}
+
+		#wrapper>section:nth-child(3) .orange{
+			/*border:1px solid red;*/
+			border-radius: 50%;
+			width: 293px;
+			height: 252px;
+			position: absolute;
+			left:50%;
+			margin-left:120px;
+			bottom: 120px;
+			z-index: 99;
+			background: url(../img/ingridient/orange_01.png);
+			cursor: pointer;
+		}
+
+		#wrapper>section:nth-child(3) .mango{
+			/*border:1px solid red;*/
+			width: 268px;
+			height: 201px;
+			border-radius: 35%;
+			position: absolute;
+			left:50%;
+			margin-left:-30px;
+			bottom: 120px;
+			z-index: 991;
+			background: url(../img/ingridient/mango_01.png);
+			cursor: pointer;
+		}
+
+		#wrapper>section:nth-child(3) .lemon{
+			/*border:1px solid red;*/
+			width: 231px;
+			height: 250px;
+			border-radius: 50%;
+			position: absolute;
+			left:50%;
+			margin-left:-130px;
+			bottom: 120px;
+			z-index: 99;
+			background: url(../img/ingridient/lemon_01.png);
+			cursor: pointer;
+		}
+
+		#wrapper>section:nth-child(3) .shea_butter{
+			/*border:1px solid red;*/
+			width: 195px;
+			height: 205px;
+			position: absolute;
+			left:20%;
+			bottom: 500px;
+			z-index: 99991;
+			background: url(../img/ingridient/shea_butter.png);
+			cursor: pointer;	
+		}
+
+		#wrapper>section:nth-child(3) .bee_house{
+			/*border:1px solid red;*/
+			width: 190px;
+			height: 193px;
+			position: absolute;
+			left:8.3%;
+			bottom: 550px;
+			z-index: 99999;
+			background: url(../img/ingridient/bee_house.png);
+			cursor: pointer;
+			animation:beehouse 5s steps(9) infinite;
+		}
+			@keyframes beehouse{
+				0%{}
+				100%{background-position: -1710px;}
+			}
+
+		#wrapper>section:nth-child(3) .bee_flower{
+			/*border:1px solid red;*/
+			width: 173px;
+			height: 195px;
+			position: absolute;
+			left:73%;
+			bottom: 30px;
+			z-index: 9999;
+			background: url(../img/ingridient/bee_flower.png);
+			cursor: pointer;
+			animation:beeflower 5s steps(10) infinite;
+		}
+			@keyframes beeflower{
+				0%{}
+				100%{background-position: -1730px;}
+			}
+
+			#wrapper>section:nth-child(3) .flower_bg{
+			/*border:1px solid red;*/
+			width: 614px;
+			height: 186px;
+			position: absolute;
+			left:72%;
+			bottom: -10px;
+			z-index: 99;
+			background: url(../img/ingridient/flower_bg.png);
+			}
+
+			#wrapper>section:nth-child(3) .sunflower{
+			width: 250px;
+			height: 290px;
+			position: absolute;
+			left:88%;
+			bottom:-10px;
+			z-index: 9999;
+			background: url(../img/ingridient/sunflower.png);
+			cursor: pointer;
+			}
+
+			#wrapper>section:nth-child(3) .lavender{
+			width: 122px;
+			height: 182px;
+			position: absolute;
+			left:82%;
+			bottom:30px;
+			z-index: 9999;
+			background: url(../img/ingridient/lavender.png);
+			cursor: pointer;	
+			}
+
+			#wrapper>section:nth-child(3) .front_leafs{
+			/*border:1px solid red;*/
+			width: 599px;
+			height: 95px;
+			position: absolute;
+			left:72%;
+			bottom: -20px;
+			z-index: 99999;
+			background: url(../img/ingridient/front_leaf.png);
+			}
+			
+			#wrapper>section:nth-child(3) .mint {
+			width:130px;
+			height: 91px;
+			position: absolute;
+			left:45%;
+			bottom:50px;
+			z-index: 999;
+			background: url(../img/ingridient/mint.png);	
+			}
+
+			#wrapper>section:nth-child(3) .cursor_ing{
+				width: 78px;
+				height: 55px;
+				/*border:1px solid red;*/
+				position: absolute;
+				z-index: 9999;
+				background: url(../img/ingridient/handcursor.png);
+				animation: handcursor 1s steps(5) infinite;
+			}
+			@keyframes handcursor{
+				0%{}
+				100%{background-position: -390px;}
+			}
+			#wrapper>section:nth-child(3) .hand_cursor_1{
+				left: 50%;
+				margin-left: -550px;
+				bottom: 450px;
+			}
+
+			#wrapper>section:nth-child(3) .hand_cursor_2{
+				left: 58.5%;
+				bottom: 470px;
+			}
+			#wrapper>section:nth-child(3) .hand_cursor_3{
+				left: 90.5%;
+				bottom: 250px;
+			}
+
+			#wrapper>section:nth-child(3) .tree_txt{
+			width: 197px;
+			height: 23px;
+			position: absolute;
+			/*border:1px solid red;*/
+			left: 12.7%;
+			z-index: 9999;
+			bottom:450px;
+			background: url(../img/ingridient/tree_txt.png);
+			}
+
+			#wrapper>section:nth-child(3) .fruit_txt{
+			width: 156px;
+			height: 23px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left:52%;
+			z-index: 999999;
+			bottom:470px;
+			background: url(../img/ingridient/ftuit_txt.png);
+			}
+
+			#wrapper>section:nth-child(3) .flower_txt{
+			width: 139px;
+			height: 23px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 85%;
+			z-index: 9999;
+			bottom:250px;
+			background: url(../img/ingridient/flower_txt.png);
+			}
+		
+/*성분 컨텐츠 모달 구현시 창닫기버튼 ---------------------------------------------------*/
+		#wrapper>section:nth-child(3) .ing_story1_tab{
+			width: 790px;
+			height: 670px;
+			position: absolute;
+			left:52%;
+			margin-left: -475px;
+			top:30%;
+			margin-top: -200px;
+			z-index: 9999999;
+			/*border:1px solid red;*/
+		}
+/*성분 컨텐츠 탭 이미지*/
+		#wrapper>section:nth-child(3) .ing_content1{
+			width:774px;
+			height:545px;
+			/*border:1px solid red;*/
+			position: absolute;
+			bottom:0%;
+		}
+		#wrapper>section:nth-child(3) .ing_story1{
+			background: url(../img/ingridient/modal_story_1.png)
+			center center no-repeat;
+		}
+		#wrapper>section:nth-child(3) .ing_story1_2{
+			background: url(../img/ingridient/modal_story_1_1.png)
+			center center no-repeat;
+		}
+		#wrapper>section:nth-child(3) .ing_story1_3{
+			background: url(../img/ingridient/modal_story_1_2.png)
+			center center no-repeat;
+		}
+
+		#wrapper>section:nth-child(3) .ing_story1_tab nav{
+			/*border:1px solid red;*/
+			width: 300px;
+			height: 50px;	
+			position: absolute;
+			top:12%;
+			left: 6%;
+			overflow: hidden;
+		}
+		#wrapper>section:nth-child(3) .ing_story1_tab nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#wrapper>section:nth-child(3) .ing_story1_tab nav ol li{
+			width: 31%;
+			height:100%;
+			/*border:1px solid red;*/
+			background-color:#432B1B; 
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			color: white;
+			line-height:35px;
+			text-align: center;
+			border-radius: 7px 7px 0 0; 
+			cursor: pointer;
+			transition: top 0.5s;
+			z-index:  99999991;
+		}
+		.tab_txt_box{
+			position: absolute;
+			width:94px;
+			height: 23px;
+			left: 50%;
+			margin-left: -47px;
+			top:20%;
+		}
+		.tab_txt1{
+			background:url(../img/ingridient/tab_txt1_white.png);
+		}
+		.tab_txt2{
+			background:url(../img/ingridient/tab_txt2_white.png);
+		}
+		.tab_txt3{
+			background:url(../img/ingridient/tab_txt3_white.png);
+		}
+		
+
+		#wrapper>section:nth-child(3) .ing_story1_tab nav ol li.ing_active{
+			top:10px;
+			background-color: #FFA600;
+		}
+		#wrapper>section:nth-child(3) .ing_story1_tab nav ol li.ing_active .tab_txt1{
+			background:url(../img/ingridient/tab_txt1.png);
+		}
+		#wrapper>section:nth-child(3) .ing_story1_tab nav ol li.ing_active .tab_txt2{
+			background:url(../img/ingridient/tab_txt2.png);
+		}
+		#wrapper>section:nth-child(3) .ing_story1_tab nav ol li.ing_active .tab_txt3{
+			background:url(../img/ingridient/tab_txt3.png);
+		}
+
+
+		#wrapper>section:nth-child(3) .ing_Tab_Xbtn{
+			width: 82px;
+			height: 78px;
+			/*border:1px solid red;*/
+			position: absolute;
+			right:35px;
+			top:135px;
+			cursor: pointer;
+			background:url(../img/ingridient/modal_Xbtn.png);
+		}
+
+		#wrapper>section:nth-child(3) .ing_modal_list_box{
+			width: 840px;
+			height: 603px;
+			/*background: url(../img/ingridient/ing_modal.png);*/
+			position: absolute;
+			left:50%;
+			margin-left: -475px;
+			top:40%;
+			margin-top: -200px;
+			z-index: 9999999;
+			/*border:1px solid red;*/
+		}
+		
+		#wrapper>section:nth-child(3) .ing_story2{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_2.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story3{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_3.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story4{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_6.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story5{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_4.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story6{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_5.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story7{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_7.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story8{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_8.png);
+			position: absolute;
+		}
+		#wrapper>section:nth-child(3) .ing_story9{
+			width: 100%;
+			height: 100%;
+			background: url(../img/ingridient/modal_story_9.png);
+			position: absolute;
+		}
+
+		#wrapper>section:nth-child(3) .ing_modal_Xbtn{
+			width: 82px;
+			height: 78px;
+			/*border:1px solid red;*/
+			position: absolute;
+			left: 85%;
+			top:7%;
+			cursor: pointer;
+			background:url(../img/ingridient/modal_Xbtn.png);
+		}
+		
+       
+/*자연물 호버시 ----------------------------------------------*/
+		#wrapper>section:nth-child(3) .pomeranate:hover{
+			background: url(../img/ingridient/pomeranate_hover.png);
+		}
+		#wrapper>section:nth-child(3) .mango:hover{
+			background: url(../img/ingridient/mango_hover.png);
+		}
+		#wrapper>section:nth-child(3) .lemon:hover{
+			background: url(../img/ingridient/lemon_hover.png);
+		}
+		#wrapper>section:nth-child(3) .orange:hover{
+			background: url(../img/ingridient/orange_hover.png);
+		}
+		#wrapper>section:nth-child(3) .shea_butter:hover{
+			background: url(../img/ingridient/shea_butter_hover.png);
+		}
+		#wrapper>section:nth-child(3) .bee_house:hover{
+			background: url(../img/ingridient/bee_house_hover.png);
+		}
+		#wrapper>section:nth-child(3) .bee_flower:hover{
+			background: url(../img/ingridient/bee_flower_hover.png);
+		}
+		#wrapper>section:nth-child(3) .sunflower:hover{
+			background: url(../img/ingridient/sunflower_hover.png);
+		}
+		#wrapper>section:nth-child(3) .lavender:hover{
+			background: url(../img/ingridient/lavender_hover.png);
+		}
+
+		
+/*<<이벤트 컨텐츠>> ---------------------------------------------------*/
+/*벌에 쫓기는 남자----*/
+		#wrapper>section:nth-child(4) .running_man_box{
+			/*border:1px solid red;*/
+			width: 229px;
+			height: 229px;
+			position: absolute;
+			left:50%;
+			margin-left:-300px;
+			bottom: 140px;
+			/*z-index: 999999;*/
+			animation:runningmanbox 5s infinite;
+		}
+		@keyframes runningmanbox{
+			0%{}
+			40%{margin-left: 200px; bottom: 10px;}
+			100%{margin-left: 800px; bottom: -400px;}
+		}
+
+	    #wrapper>section:nth-child(4) .running_man{
+			/*border:1px solid red;*/
+			width: 229px;
+			height: 229px;
+			position: absolute;
+			z-index: 999;
+			background: url(../img/event/running_man_01.png);
+			animation:running_man 1s steps(42) infinite;
+	    }
+	    @keyframes running_man{
+	    	0%{}
+	    	100%{background-position: -9618px;}
+	    }
+
+
+/*이벤트 캐릭터----------*/
+		#wrapper>section:nth-child(4) .event_cha{
+			/*border:1px solid red;*/
+			width: 212px;
+			height: 294px;
+			position: absolute;
+			z-index: 9999;
+			bottom:100px;
+			background: url(../img/event/event_cha.png);
+			left:38%;
+			animation:event_cha 8s steps(44) infinite;
+		}
+		@keyframes event_cha{
+			0%{}
+			100%{background-position: -9328px;}
+		}
+
+/*벌통 여는 남자-------------*/
+		#wrapper>section:nth-child(4) .open_man{
+			/*border:1px solid blue;*/
+			width: 95px;
+			height: 135px;
+			position: absolute;
+			left:50%;
+			margin-left:400px;
+			bottom: 60px;
+			z-index: 99;
+			background: url(../img/event/open_man.png);
+			/*background-size: 100%;*/
+			animation: openman 2s steps(8) infinite;
+		}	
+		@keyframes openman{
+			0%{}
+			100%{background-position: -760px;}
+		}
+
+
+/*벌집 흔드는 남자---------------*/
+		#wrapper>section:nth-child(4) .shaking_man{
+			/*border:1px solid blue;*/
+			width: 121px;
+			height: 147px;
+			position: absolute;
+			left:50%;
+			margin-left:px;
+			bottom: 30px;
+			z-index: 99991;
+			background: url(../img/event/shaking_man.png);
+			/*background-size: 100%;*/
+			animation: shaking 2s steps(5) infinite;
+		}	
+		@keyframes shaking{
+			0%{}
+			100%{background-position: -605px;}
+		}
+
+
+/*벌통에 연기 쏘는 남자--------------*/
+		#wrapper>section:nth-child(4) .smoke_man{
+			/*border:1px solid blue;*/
+			width: 132px;
+			height: 178px;
+			position: absolute;
+			left:50%;
+			margin-left:-800px;
+			bottom:10px;
+			z-index: 99991;
+			background: url(../img/event/smoke_man.png);
+			/*background-size: 100%;*/
+			animation: smoke 2s steps(5) infinite;
+		}	
+		@keyframes smoke{
+			0%{}
+			100%{background-position: -660px;}
+		}
+
+
+/*벌집 고치는 남자------------*/
+		#wrapper>section:nth-child(4) .hammer_man{
+			/*border:1px solid blue;*/
+			width: 97px;
+			height: 104px;
+			position: absolute;
+			left:50%;
+			margin-left:-450px;
+			bottom: 60px;
+			z-index: 99991;
+			background: url(../img/event/hammer_man_01.png);
+			/*background-size: 100%;*/
+			animation: hammer 2s steps(3) infinite;
+		}	
+		@keyframes hammer{
+			0%{}
+			100%{background-position: -291px;}
+		}
+
+
+/*이벤트 상자 밑 땅----------------------*/
+		#wrapper>section:nth-child(4) .grand{
+			/*border:1px solid blue;*/
+			width: 50%;
+			height: 24%;
+			z-index: 10;
+			position: absolute;
+			left:4.5%;
+			/*margin-left:-670px;*/
+			bottom:-2px;
+			/*opacity: 0.5;*/
+			background: url(../img/event/land.png) 
+			bottom no-repeat;
+			background-size: contain;
+		}	
+
+
+/*이벤트 상자 고정형------------		*/
+		#wrapper>section:nth-child(4) .honey_box_01{
+			/*border:1px solid blue;*/
+			width: 50%;
+			height: 30%;
+			position: absolute;
+			left:4.5%;
+			/*margin-left:-700px;*/
+			bottom:140px;
+			z-index: 9999;
+			background: url(../img/event/honey_box_01.png) bottom no-repeat;
+			background-size: contain;
+		}
+
+/*올라오는 이벤트창-----------------------------------*/
+		#wrapper>section:nth-child(4) .honey_box_02{
+			/*border:1px solid blue;*/
+			width: 50%;
+			height: 48%;
+			z-index: 9;
+			position: absolute;
+			left:4.5%;
+			/*margin-left:-690px;*/
+			bottom:40px;
+			background: url(../img/event/honey_box_02.png)
+			bottom no-repeat;
+			background-size: contain;
+		}	
+		.honey_box_02.ani{
+			animation: eventool 1s linear ;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes eventool{
+			0%{bottom: 40px;}
+			100%{bottom:360px;}
+		}
+
+
+/*이벤트 캐로셀 ------------------------------------------*/
+		#wrapper>section:nth-child(4) #event_carousel_box{
+			/*border:1px solid red;*/
+			width: 570px;
+			height: 322px;
+		    position: absolute;
+		    top:16.5%;
+		    left:20%;
+		}
+		#wrapper>section:nth-child(4) #event_carousel_box 
+		#event_carousel {
+			/*border:1px solid red;*/
+			width: 86%;
+			height: 100%;
+			left:7%;
+		    position: absolute;
+		     overflow: hidden;
+		}	
+		#wrapper>section:nth-child(4) #event_carousel_box 
+		#event_carousel .event_gallery{
+			/*border:1px solid black;*/
+			width:750px;
+			left: 0;
+			height: 100%;
+		    position: absolute;
+		    overflow: hidden;
+		}
+		#wrapper>section:nth-child(4) #event_carousel_box 
+		#event_carousel .event_gallery li{
+			/*border:1px solid blue;*/
+			width:  32.5%;
+			height: 100%;
+		    position: relative;
+		    float: left;
+		    left: ; 
+		    cursor: pointer;
+		    display: block;
+		}
+
+/*이벤트 캐로셀 이미지-----------		*/
+		#wrapper>section:nth-child(4) #event_carousel_box 
+		#event_carousel .event_gallery li:nth-child(1){
+			/*left: 0%;*/
+			background: url(../img/event/event_story_01.png)
+			center center no-repeat;
+			background-size:cover;
+		}
+		#wrapper>section:nth-child(4) #event_carousel_box 
+		#event_carousel .event_gallery li:nth-child(2){
+			/*left:32%;*/
+			background: url(../img/event/event_story_02.png)
+			center center no-repeat;
+			background-size:cover;
+		}
+		#wrapper>section:nth-child(4) #event_carousel_box 
+		#event_carousel .event_gallery li:nth-child(3){
+			/*left:66%;*/
+			background: url(../img/event/event_story_03.png)
+			center center no-repeat;
+			background-size:cover;
+		}
+
+/*이벤트 좌우 캐로셀 버튼-----------------------------*/
+        .event_side_bt{
+        	/*border:1px solid blue;*/
+        	width: 50px;
+        	height: 62px;
+        	position: absolute;
+			top:45%;
+			color: white;
+			cursor: pointer;
+        }
+		.event_left{
+			left:0;
+			background: url(../img/home/main_carousel_button_02.png);
+			background-size: cover;
+		 }
+		.eventright{
+			right:0;
+			background: url(../img/home/main_carousel_button_01.png);
+			background-size: cover;
+		 }
+
+
+/*이벤트캐로셀 클릭시 뜨는  모달창------------------------------------------*/	
+		#wrapper>section:nth-child(4) .event_modal_list_box{
+			width: 716px;
+			height: 860px;
+			left: 50%;
+			position: absolute;
+			z-index: 9999991;
+			top:5%;
+			background: url(../img/event/event_story_01_01.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(4) .event_modal_list{
+			width: 100%;
+			height: 648px;
+			position: absolute;
+			bottom:0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+
+		#event_carousel_box2{
+			width: 100%;
+			height: 270px;
+			position: absolute;
+			top: 33%;
+			left:0%;
+			background-color: #2B4722;
+		}
+		#event_carousel2{
+			width: 350px;
+			height: 210px;
+			left:50%;
+			top:6%;
+			margin-left: -175px;
+		    position: absolute;
+		}
+		.event_gallery2{
+			border: dotted #FFAA17;
+			border-radius: 15px;
+			width: 100%;
+			height: 100%;
+		    position: absolute;
+		    overflow: hidden;
+		}
+		.event_gallery2 li{
+			width: 333px;
+			height: 194px;
+		    position: absolute;
+		    float: left;
+		    left: 2%;
+		    top:2.5%;
+		    display: block;
+		}
+		.event_gallery2 li:nth-child(1){
+			background: url(../img/event/event_story_01_1_carousel01.png)
+			center center no-repeat;
+			z-index: 9;
+		}
+		.event_gallery2 li:nth-child(2){
+			background: url(../img/event/event_story_01_1_carousel02.png)
+			center center no-repeat;
+			z-index: 8;
+		}
+		.event_gallery2 li:nth-child(3){
+			background: url(../img/event/event_story_01_1_carousel03.png)
+			center center no-repeat;
+			z-index: 7;
+		}
+		.event_gallery2 li:nth-child(4){
+			background: url(../img/event/event_story_01_1_carousel04.png)
+			center center no-repeat;
+		}
+
+		.event_btn_set1{
+			width: 100px;
+			height: 15px;
+			position: absolute;
+			left: 50%;
+			margin-left: -50px;
+			bottom:4%;
+		}
+		.event_btn_set1 li{
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color:#FFAA17;
+			float: left;
+			margin: 0 5% 0 5%;
+			cursor: pointer;
+			display: block;
+		}
+		 .event_btn_set1 li.event_btn_active{
+	     	background-color: #A35C07;
+	     }
+
+	      .event_btn_set1 li:hover{
+	      	background-color: #A35C07;
+	      }
+		.event_in{
+        	width: 50px;
+        	height: 62px;
+        	position: absolute;
+			top:50%;
+			margin-top: -31px;
+			color: white;
+			cursor: pointer;
+		}
+		/*.event_left_btn{
+			left:15%;
+			background: url(../img/home/main_carousel_button_02.png);
+			background-size: cover;
+		 }
+		.event_right_btn{
+			right:15%;
+			background: url(../img/home/main_carousel_button_01.png);
+			background-size: cover;
+		 }*/
+		#wrapper>section:nth-child(4) .event_modal_list .event_content{
+			width:100%;
+			height:1029px;
+			position: absolute;
+			left: 0;
+			top:0;
+			background: url(../img/event/event_story_01_02.png) no-repeat;
+			z-index: -2;
+		}
+
+/*이벤트 모달창1번 탭버튼과 내용-------------------------*/
+		.event_tab_box{
+			width: 716px;
+			height: 310px;
+			position: absolute;
+			bottom:-35%;
+			left: 0%;
+		}
+
+		.event_tab{
+			width: 716px;
+			height: 249px;
+			position: absolute;
+			bottom:0%;
+			left: 0%;
+		}
+
+		.event_tab_story1{
+			background: url(../img/event/event_story_01_1_schedule.png);
+				animation: tab_story 7s steps(4) infinite;
+		}
+		@keyframes tab_story {
+			0%{}
+			100%{background-position: -2864px;}
+		}
+
+
+		.event_tab_story2{
+			background: url(../img/event/event_story_01_1_map.png);
+		}
+
+/*모달창1번 탭버튼 -----------------------------------------------*/
+		.event_tab_box nav{
+			width: 300px;
+			height: 50px;	
+			position: absolute;
+			top:3.5%;
+			left: 3%;
+			/*overflow: hidden;*/
+		}
+		.event_tab_box nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.event_tab_box nav ol li{
+			width: 98px;
+			height:100%;
+			/*border:1px solid red;*/
+			background-color:#FFAA17; 
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			border-radius: 7px 7px 0 0; 
+			cursor: pointer;
+			transition: all 0.5s;
+			z-index:  99999991;
+		}
+		.event_tab_box nav ol li:nth-child(2){
+			left: 3%;
+		}
+		.event_tab_box nav ol li .event_tab_img1{
+			width: 89px;
+			height: 46px;
+			position: absolute;	
+			bottom: 20%;
+			left: 50%;
+			margin-left: -45px;
+			background: url(../img/event/event_tab_story1_schedule_btn.png) no-repeat;
+		}
+		.event_tab_box nav ol li .event_tab_img2{
+			width: 89px;
+			height: 46px;
+			position: absolute;	
+			bottom: 20%;
+			left: 50%;
+			margin-left: -45px;
+			background: url(../img/event/event_tab_story2_map_btn.png) no-repeat;
+		}
+		.event_in_map{
+			width: 333px;
+			height: 200px;
+			position: absolute;
+			bottom:14%;
+			left: 50%;
+			margin-left: -166.5px;
+		}
+
+/*이벤트 1번모달창 탭 엑티브시------------------------------------------------ */
+		.event_tab_box nav ol li.active{
+			top:10px;
+		}
+
+		.event_tab_box nav ol li.active .event_tab_img1{
+			bottom:3.4%;
+			background: url(../img/event/event_tab_story1_schedule_btn_hover.png) no-repeat;
+			animation: tab_img 1s  infinite ;
+		}
+		@keyframes tab_img {
+			0%{background:url(../img/event/event_tab_story1_schedule_btn_hover.png);}
+			50%{background:url(../img/event/event_tab_story1_schedule_btn_active.png);}
+		}
+
+		.event_tab_box nav ol li.active .event_tab_img2{
+			bottom:3.4%;
+			background: url(../img/event/event_tab_story2_map_btn_hover.png) no-repeat;
+				animation: tab_imgg 1s  infinite ;
+		}
+		@keyframes tab_imgg {
+			0%{background:url(../img/event/event_tab_story2_map_btn_hover.png);}
+			50%{background:url(../img/event/event_tab_story2_map_btn_active.png);}
+		}
+		
+/*이벤트 모달창1번 신청버튼-------------------------*/		
+		.event_signUp_btn{
+			width: 176px;
+			height: 32px;
+			position: absolute;
+			bottom: -55%;
+			left: 39%;
+			background: url(../img/event/event_story_01_1_ask_btn.png);
+			animation: pulse 1s infinite;
+			cursor: pointer;
+			display: block;
+		}
+
+
+
+/*이벤트 모달창 2번-----------------------------------------------------*/
+		#wrapper>section:nth-child(4) .event_modal_list_box2{
+			width: 716px;
+			height: 860px;
+			left: 50%;
+			position: absolute;
+			z-index: 9999991;
+			background: url(../img/event/event_story_02_01.png);
+			top:5%;
+		}
+
+		#wrapper>section:nth-child(4) .event_modal_list2{
+			width: 100%;
+			height: 68%;
+			position: absolute;
+			bottom:0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		#wrapper>section:nth-child(4) .event_modal_list2 .event_content2{
+			width:100%;
+			height:1091px;
+			position: absolute;
+			left: 0;
+			top:0;
+			background: url(../img/event/event_story_02_1.png) no-repeat center center;
+			z-index: -1;
+		}
+		.event_modal_Xbtn2{
+			width: 58px;
+			height: 55px;
+			position: absolute;
+			right:0;
+			background: url(../img/cosmetic/cos_xbtn.png);
+			cursor: pointer;
+			z-index: 999991;
+		}
+
+		.event_url_btn{
+			width: 98px;
+			height:32px;
+			position: absolute;
+			bottom: -60%;
+			left: 77%;
+			background: url(../img/event/event_story_02_1_url_btn.png);
+			cursor: pointer;
+			display: block;
+		}
+		.event_url_btn:hover{
+			background: url(../img/event/event_story_02_1_url_btn_hover.png);
+		}
+
+		#event_url{
+			width: 450px;
+			height:29px;
+			border-radius: 10px;
+			border-style: none;
+			position: absolute;
+			bottom: -59.5%;
+			left: 11%;
+			cursor: pointer;
+			display: block;
+		}
+
+	
+/*이벤트 모달창 3번------------------------------------*/
+		#wrapper>section:nth-child(4) .event_modal_list_box3{
+			width: 716px;
+			height: 860px;
+			left: 50%;
+			position: absolute;
+			z-index: 9999991;
+			background: url(../img/event/event_story_03_1.png) no-repeat;
+			top:5%;
+		}
+
+		#wrapper>section:nth-child(4) .event_modal_list3{
+			width: 100%;
+			height: 86%;
+			position: absolute;
+			bottom:0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		#wrapper>section:nth-child(4) .event_modal_list3 .event_story3{
+			width:100%;
+			height:1102px;
+			position: absolute;
+			left: 0;
+			top:0;
+			background: url(../img/event/event_story_03_01.png) no-repeat center center;
+			z-index: -1;
+		}
+		.event_modal_Xbtn3{
+			width: 55px;
+			height: 55px;
+			position: absolute;
+			right:0;
+			top:1%;
+			background: url(../img/cosmetic/cos_xbtn_01.png);
+			cursor: pointer;
+			z-index: 999991;
+		}
+
+
+/*이벤트 모달창 닫기버튼-------------------------*/			
+		.event_modal_Xbtn{
+			width: 55px;
+			height: 55px;
+			position: absolute;
+			right:0;
+			top:1%;
+			background: url(../img/cosmetic/cos_xbtn_01.png);
+			cursor: pointer;
+			z-index: 999991;
+		}
+
+		
+
+/*<<리뷰 콘텐츠>>--------------------------------------*/
+		#wrapper>section:nth-child(5) .bg_lamp{
+			width: 227px;
+			height: 402px;
+			position: absolute;
+			left:50%;
+			margin-left:-160px;
+			bottom: 100px;
+			background: url(../img/riview/bg_lamp_02.png)
+			no-repeat left;
+		}
+
+		.bg_lamp.ani{
+			animation: bg_lamp 2s 3 forwards;
+		}
+
+		@keyframes bg_lamp{
+			0%{background: url(../img/riview/bg_lamp_02.png)}
+			50%{background: url(../img/riview/bg_lamp_01.png)}
+		}
+
+/*리뷰부분 건물---------*/
+		#wrapper>section:nth-child(5) .shop_01{
+			width: 1626px;
+			height: 714px;
+			z-index: 9;
+			position: absolute;
+			right:-50%;
+			margin-right:100px;
+			bottom: 40px;
+			background: url(../img/riview/shop_01.png)
+			no-repeat left;
+		}
+
+/*문안쪽 움직임------------------*/
+		#wrapper>section:nth-child(5) .door{
+			width: 200px;
+			height: 470px;
+			position: absolute;
+			right:-50%;
+			margin-right:1000px;
+			bottom: 57px;
+			z-index: 9999;
+			background: url(../img/riview/door.png)
+			no-repeat;
+			animation: door 3s steps(5) infinite;
+		}
+		@keyframes door {
+			0%{}
+			100%{background-position: -1000px;}
+		}
+
+/*옆간판 반짝임-----------------*/
+		#wrapper>section:nth-child(5) .sign{
+			/*border:1px solid purple;*/
+			width: 205px;
+			height: 216px;
+			position: absolute;
+			right:-50%;
+			margin-right:1623px;
+			bottom: 330px;
+			z-index: 9999;
+			background: url(../img/riview/sign_02.png)
+			no-repeat;
+		}
+
+		.sign.ani{
+			animation: sign 1s  3 ;
+		}
+
+		@keyframes sign {
+			0%{background:url(../img/riview/sign_02.png);}
+			50%{background:url(../img/riview/sign_01.png);}
+		}
+
+/*문패----------*/
+		#wrapper>section:nth-child(5) .open{
+			/*border:1px solid purple;*/
+			width: 97px;
+			height: 91px;
+			position: absolute;
+			right:-50%;
+			margin-right:1050px;
+			bottom: 270px;
+			z-index: 9999;
+			background: url(../img/riview/open.png)
+			no-repeat;
+			animation: swing 2s infinite;
+		}
+
+/*버츠비 간판----------------		*/
+		#wrapper>section:nth-child(5) .neon{
+			/*border:1px solid purple;*/
+			width: 530px;
+			height: 72px;
+			position: absolute;
+			right:-50%;
+			margin-right:1035px;
+			bottom: 668px;
+			z-index: 9999;
+			background: url(../img/riview/neon.png)
+			no-repeat;
+			animation: neon 1s steps(2) infinite ;
+		}
+		@keyframes neon {
+			0%{}
+			100%{background-position:-1060px;}
+		}
+/*리뷰전광판*/
+		.movie_board{
+			position: absolute;
+			width:540px;
+			height: 421px;
+			left:1%;
+			top:280px;
+			z-index: 999;
+			cursor: pointer;
+			background:url(../img/riview/movie_board_hover1.png) 
+			no-repeat;	
+		}
+		.movie_board.ani{
+			animation:movie_board 1s 3 forwards;
+		}
+
+		@keyframes movie_board{
+			0%{background: url(../img/riview/movie_board_hover1.png)}
+			50%{background: url(../img/riview/movie_board1.png)}
+		}
+		
+		
+		#movie_bee{
+			position: absolute;
+			width:462px;
+			height: 260px;
+			left:8.95%;
+			top:113px;
+			z-index: 9999;
+			cursor: pointer;
+		}	
+		.movie_board_box{
+			width: 462px;
+			height: 261px;
+			position: absolute;
+			left:8.95%;
+			top:112px;
+			z-index: 9999;
+			background: url(../img/riview/movie_board_box.png);
+		}
+		.movie_board_btn{
+			width: 85px;
+			height: 87px;
+			margin-left: -42.5px;
+			position: absolute;
+			left:50%;
+			top:50%;
+			margin-top:-43.5px; 
+			z-index: 9999;
+			background: url(../img/riview/movie_board_btn.png);
+		}
+		.movie_board_btn:hover{
+			background: url(../img/riview/movie_board_btn_hover.png);
+		}
+
+/*리뷰 캐릭터 -------		*/
+		#wrapper>section:nth-child(5) .riview_cha{
+			width: 170px;
+			height: 282px;
+			position: absolute;
+			right:-50%;
+			margin-right:1670px;
+			bottom: 57px;
+			z-index: 9999;
+			background: url(../img/riview/riview_cha_01.png)
+			no-repeat;
+			animation: riview_cha 2s steps(10) infinite;
+		}
+		@keyframes riview_cha {
+			0%{}
+			100%{background-position: -1700px;}
+		}
+
+
+/*리뷰 캐로셀 --------------------------------------------*/
+		#review_carousel_box{
+			width: 420px;
+			height: 450px;
+			position: absolute;
+			right:-50%;
+			margin-right:1212.5px;
+			bottom:100px;
+			z-index: 91;
+			/*border:1px solid red;*/
+		}
+		#review_carousel_box #review_carousel{
+			position: absolute;
+			/*border:1px solid red;*/
+			width: 100%;
+			height: 306px;
+			left:0;
+			bottom:109px;
+			z-index: 99;
+		}
+		#review_carousel ol.review_gallery{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			overflow:hidden;
+		}
+		#review_carousel ol.review_gallery li{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 100%;
+			cursor: pointer;
+			display: block;
+			z-index: 991;
+		}
+		#review_carousel ol.review_gallery li:nth-of-type(1){
+			background: url(../img/riview/review_modal_story_01.png) no-repeat center;
+			background-size: 107%;
+			left: 0;
+		}
+		#review_carousel ol.review_gallery li:nth-of-type(2){
+			background: url(../img/riview/review_modal_story_02.png) no-repeat center;
+			background-size: 107%;
+
+		}
+
+/*캐로셀 버튼부분 --------------------------------------------*/
+		#wrapper>section:nth-child(5) .brick_left{
+			width: 134px;
+			height: 74px;
+			background: url(../img/riview/brick_left.png);
+			position: absolute;
+			right:64%;
+			bottom: 32px;
+			z-index: 9999;
+			cursor: pointer;
+			display: block;
+		}
+		#wrapper>section:nth-child(5) .brick_right{
+			width: 130px;
+			height: 58px;
+			background: url(../img/riview/brick_right.png);
+			position: absolute;
+			right:5%;
+			bottom: 30px;
+			z-index: 9999;
+			cursor: pointer;
+		}
+
+/*캐로셀 버튼 호버시 -------------------------------------------*/
+		#wrapper>section:nth-child(5) .brick_left:hover{
+			background: url(../img/riview/brick_left_hover.png);
+		}
+		#wrapper>section:nth-child(5) .brick_right:hover{
+			background: url(../img/riview/brick_right_hover.png);
+		}
+
+		.review_modal_Xbtn{
+			width: 55px;
+			height: 55px;
+			position: absolute;
+			right:0;
+			background: url(../img/cosmetic/cos_xbtn_01.png);
+			cursor: pointer;
+			z-index: 999991;
+		}
+		.review_modal_list{
+			width: 1242px;
+			height:887px;
+			position: absolute;
+			top:4%;
+			left: 14%;
+			bottom: 0;
+			z-index: 9999991;
+		}
+
+		.review_modal_list .review_content{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			}
+
+		.review_story1{
+			background: url(../img/riview/review_modal_story_01_1.png) center no-repeat;
+			background-size:cover;
+		}
+		.review_story2{
+			background: url(../img/riview/review_modal_story_02_01.png) center no-repeat;
+			background-size:cover;
+		}
+
+/*리뷰 쓰러가기 버튼-----		*/
+		.review_write_btn{
+			width: 156px;	
+			height: 45px;
+			position: absolute;
+			left: 30%;
+			bottom: 60px;
+			background: url(../img/riview/review_modal_story_01_1_review_btn.png)
+			 no-repeat center;
+			background-size: contain;
+			display: block;
+			cursor: pointer;
+			animation: pulse 1s infinite;
+		}
+
+/*//리뷰 작성버튼 클릭시 나오는 모달 ----------------------------------------------*/
+		.review_modal_Xbtn2{
+			width: 61px;
+			height: 33px;
+			position: absolute;
+			right:0.3%;
+			top:26%;
+			background: url(../img/riview/review_modal_Xbtn.png) no-repeat;
+			cursor: pointer;
+			z-index: 999999;
+		}
+		.review_modal_Xbtn2:hover{
+			background: url(../img/riview/review_modal_Xbtn_hover.png) no-repeat;
+		}
+		.review_modal_list2{
+			width:640px;
+			height:710px;
+			position: absolute;
+			top:20%;
+			left: 40%;
+			bottom: 0;
+			z-index: 9999999;
+			background: url(../img/riview/review_modal_story_01_2.png) no-repeat;
+		}
+
+		#review_txt1{
+			height: 20px;
+			position: absolute;
+			left: 20%;
+			top:26.6%;
+			border-style: none;
+/*			background-color: #FFDF8B;*/
+		}
+		#star{
+			position: absolute;
+			left: 20%;
+			top:36%;
+		}
+		#cos_select{
+			position: absolute;
+			left: 20%;
+			top:31%;
+		}
+		#review_file{
+			position: absolute;
+			left: 20%;
+			top:40.5%;
+		}
+		#review_txt2{
+			position: absolute;
+			left: 9.3%;
+			bottom:12%;
+			border-style: none;
+		}
+		.review_done{
+			width: 98px;
+			height: 32px;
+			position: absolute;
+			left: 36%;
+			bottom:7%;
+			cursor: pointer;
+			background: url(../img/riview/review_modal_done.png);
+		}
+		.review_done:hover{
+			background: url(../img/riview/review_modal_done_hover.png);
+		}
+
+		.screen4{
+			z-index: 9999999; 
+		}
+
+/*<<제품 콘텐츠>> ====================-------------------------*/
+		#wrapper>section:nth-child(6){
+			overflow: hidden;
+		}
+
+/*건물뒤 별반짝임-----*/
+		#wrapper>section:nth-child(6) .star_01{
+			/*border:1px solid red;*/
+			width: 1844px;
+			height: 350px;
+			position: absolute;
+			right:0px;
+			top:0px;
+			background: url(../img/cosmetic/star_01.png);
+			animation: a_star 3s infinite ;
+		}
+		@keyframes a_star{
+			0%{background:url(../img/cosmetic/star_01.png);}
+			50%{background:url(../img/cosmetic/star_02.png);}
+		}
+
+/*제품컨텐츠 건물-----		*/
+			#wrapper>section:nth-child(6) .shop_02{
+		/*	border:1px solid green;*/
+			width: 1757px;
+			height: 714px;
+			z-index: 10;
+			position: absolute;
+			left:50%;
+			margin-left: -950px;
+			bottom: 40px;
+			background: url(../img/cosmetic/shop_02.png)
+			no-repeat center;
+			/*background-size: contain;*/
+		}
+
+
+/*오른쪽 가로등 깜박임----		*/
+		#wrapper>section:nth-child(6) .street_lamp{
+			width: 509px;
+			height: 805px;
+			z-index: 11;
+		/*	border:1px solid yellow;*/
+			position: absolute;
+			left:50%;
+			margin-left: 410px;
+			bottom: 50px;
+			background: url(../img/cosmetic/street_lamp_02.png)
+			no-repeat center;
+		}
+
+		.street_lamp.ani{
+			animation:street_lamp 1s 3 forwards;
+		}
+
+		@keyframes street_lamp{
+			0%{background: url(../img/cosmetic/street_lamp_02.png)}
+			50%{background: url(../img/cosmetic/street_lamp_01.png)}
+		}
+
+/*제품 캐릭터--		*/
+		#wrapper>section:nth-child(6) .cos_cha{
+			width: 202px;
+			height: 265px;
+			position: absolute;
+			left: 50%;
+			margin-left:-550px;
+			bottom: 200px;
+			z-index: 999999999;
+			background: url(../img/cosmetic/cos_cha.png)
+			no-repeat;
+			animation: cos_cha 3.5s steps(17) infinite;
+		}
+		@keyframes cos_cha {
+			0%{}
+			100%{background-position: -3434px;}
+		}
+
+/*제품 서브캐릭터---		*/
+		#wrapper>section:nth-child(6) .cos_sub_cha{
+		    width: 260px;
+			height: 381px;
+			position: absolute;
+			left: 50%;
+			margin-left:335px;
+			bottom: 115px;
+			z-index: 999999999;
+			background: url(../img/cosmetic/cos_sub_cha.png)
+			no-repeat;
+			animation: cos_sub_cha 3.5s steps(18) infinite;
+		}
+		@keyframes cos_sub_cha {
+			0%{}
+			100%{background-position: -4680px;}
+		}
+
+
+/*제품 박스-----------------------------------------------------		*/
+		.cosmetic_box_01{
+			/*border:1px solid red;*/
+		width: 700px;
+		height: 152px;
+		position: absolute;
+		bottom: 43%;
+		left: 50%;
+		margin-left: -350px;
+		z-index: 99;
+		overflow: hidden;
+		}
+		.cosmetic_box_01 ul{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.cosmetic_box_01 ul li{
+			display: block;
+			width: 172px;
+			height: 152px;
+			position: absolute;
+			cursor: pointer;
+		}
+		.cosmetic_box_01 ul li div{
+			width: 100%;
+			height: 100%;
+			
+		}
+
+/*제품 첫 째줄------------------------------------------------*/		
+		.cosmetic_box_01 ul li:nth-child(1){
+			background: url(../img/cosmetic/best_cosmetic.png) no-repeat;
+			left:20px;
+		}
+		.cosmetic_box_01 ul li:nth-child(2){
+			background: url(../img/cosmetic/mom_baby.png) no-repeat;
+			left: 270px;
+		}
+		.cosmetic_box_01 ul li:nth-child(3){
+			background: url(../img/cosmetic/skin_type.png) no-repeat;
+			left:520px;
+		}
+
+/*제품 첫 째줄 호버시------------------------------------------------		*/
+		.cosmetic_box_01 ul li:nth-child(1):hover .best{
+			background: url(../img/cosmetic/best_cosmetic_hover.png) no-repeat;
+		}
+		.cosmetic_box_01 ul li:nth-child(2):hover .mom_baby{
+			background: url(../img/cosmetic/mom_baby_hover.png)
+			 no-repeat;
+		}
+		.cosmetic_box_01 ul li:nth-child(3):hover .skin_type{
+			background: url(../img/cosmetic/skin_type_hover.png)
+			 no-repeat;
+		}
+
+/*제품 두 번째 줄-----------------------------------------*/
+		.cosmetic_box_02{
+		/*border:1px solid red;*/
+		width: 466px;
+		height: 152px;
+		position: absolute;
+		bottom:22%;
+		left: 50%;
+		margin-left: -233px;
+		z-index: 99;
+		overflow: hidden;
+		}
+		.cosmetic_box_02 ul{
+			/*border:1px solid red;*/
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		.cosmetic_box_02 ul li{
+			/*border:1px solid red;*/
+			display: block;
+			width: 172px;
+			height: 152px;
+			position: absolute;
+			cursor: pointer;
+		}
+		.cosmetic_box_02 ul li div{
+			width: 100%;
+			height: 100%;
+			
+		}
+		.cosmetic_box_02 ul li:nth-child(1){
+			background: url(../img/cosmetic/cosmetic.png) no-repeat;
+			left: 25px;
+		}
+		.cosmetic_box_02 ul li:nth-child(2){
+			background: url(../img/cosmetic/pet_care.png) no-repeat;
+			left: 275px;
+		}
+
+/*제품 두 번째 줄 호버시 -----------------------------------------*/
+		.cosmetic_box_02 ul li:nth-child(1):hover .cosmetic_item{
+			background: url(../img/cosmetic/cosmetic_hover.png)
+			no-repeat;
+		}
+		.cosmetic_box_02 ul li:nth-child(2):hover .pet_care{
+			background: url(../img/cosmetic/pet_care_hover.png)
+			no-repeat;	
+		}
+
+
+/*제품 모달 내용들.------------------------------------------------	*/
+/*탭내용--*/
+		#wrapper>section:nth-child(6) .cos_tab_box{
+			width: 950px;
+			height: 659px;
+			position: absolute;
+			left: 50%;
+			margin-left: -475px;
+			top:50%;
+			margin-top: -350px;
+			z-index: 999999999;
+			background:url(../img/cosmetic/cos_modal_paper_board.png);
+		}
+		#wrapper>section:nth-child(6) .cos_tab_box_son{
+			width: 896px;
+			height: 543.5px;
+			position: absolute;
+			bottom: 7.9%;
+			left: 50%;
+			margin-left: -450px;
+			z-index: 999999999;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+		#wrapper>section:nth-child(6) .cos_tab_contents{
+			width: 763px;
+			position: absolute;
+			left: 50%;
+			margin-left: -381.5px;
+			top:0%;
+		}
+
+/*1번탭 이미지----*/
+		#wrapper>section:nth-child(6) .cos_story1_1{
+			height: 4500px;
+			background: url(../img/cosmetic/cos_modal_story1_1.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story1_2{
+			height: 5931px;
+			background: url(../img/cosmetic/cos_modal_story1_2.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story1_3_re{
+			height: 772px;
+			background: url(../img/cosmetic/cos_review_write_box.png)
+			no-repeat;
+		}
+
+/*2번탭 이미지----*/
+		#wrapper>section:nth-child(6) .cos_story2_1{
+			height: 5542px;
+			background: url(../img/cosmetic/cos_modal_story2_1.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story2_2{
+			height: 5294px;
+			background: url(../img/cosmetic/cos_modal_story2_2.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story2_3_re{
+			height: 772px;
+			background: url(../img/cosmetic/cos_review_write_box.png)
+			no-repeat;
+		}
+
+/*3번탭 이미지----*/
+		#wrapper>section:nth-child(6) .cos_story3_1{
+			height: 5360px;
+			background: url(../img/cosmetic/cos_modal_story3_1.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story3_2{
+			height: 5043px;
+			background: url(../img/cosmetic/cos_modal_story3_2.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story3_3_re{
+			height: 772px;
+			background: url(../img/cosmetic/cos_review_write_box.png)
+			no-repeat;
+		}
+
+/*4번탭 이미지----*/
+		#wrapper>section:nth-child(6) .cos_story4_1{
+			height: 4803px;
+			background: url(../img/cosmetic/cos_modal_story4_1.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story4_2{
+			height: 6171px;
+			background: url(../img/cosmetic/cos_modal_story4_2.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story4_3{
+			height: 5417px;
+			background: url(../img/cosmetic/cos_modal_story4_3.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story4_4_re{
+			height: 772px;
+			background: url(../img/cosmetic/cos_review_write_box.png)
+			no-repeat;
+		}						
+
+/*5번탭 이미지---------------------------------*/
+		#wrapper>section:nth-child(6) .cos_story5{
+			height: 5360px;
+			background: url(../img/cosmetic/cos_modal_story5.png)
+			no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_story5_re{
+			height: 772px;
+			background: url(../img/cosmetic/cos_review_write_box.png)
+			no-repeat;
+		}
+
+/*1번 탭버튼 ------------------------------------------------------------*/
+		.cos_modal_list_box1 nav{
+			width: 300px;
+			height: 50px;	
+			position: absolute;
+			top:1.9%;
+			left: 15%;
+			overflow: hidden;
+		}
+		.cos_modal_list_box1 nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.cos_modal_list_box1 nav ol li{
+			width: 30.1%;
+			height:100%;
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			text-align: center;
+			cursor: pointer;
+			transition: top 0.5s;
+			opacity: 0.8;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li:nth-child(1){
+			background-color:#FFD34A;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li:nth-child(2){
+			left: 1%;
+			background-color:#889E31;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li:nth-child(3){
+			left: 1.5%;
+			background-color:#FF8C32;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li .cosmetic_txt_img1{
+			position: absolute;
+			width: 87px;
+			height: 17px;
+			left: 50%;
+			margin-left: -43.5px;
+			top:20%;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li .cos_txt_img1{
+			background: url(../img/cosmetic/cos_tab_txt2.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li .cos_txt_img2{
+			background: url(../img/cosmetic/cos_tab_txt3.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li .cos_txt_img4{
+			background: url(../img/cosmetic/cos_tab_txt1.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box1 nav ol li.cos_tab1_active{
+			top:10px;
+			opacity: 1;
+		}
+
+/*2번 탭버튼 ------------------------------------------------------------*/
+		.cos_modal_list_box2 nav{
+			width: 300px;
+			height: 50px;	
+			position: absolute;
+			top:1.9%;
+			left: 15%;
+			overflow: hidden;
+		}
+		.cos_modal_list_box2 nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.cos_modal_list_box2 nav ol li{
+			width: 30.1%;
+			height:100%;
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			text-align: center;
+			cursor: pointer;
+			transition: top 0.5s;
+			opacity: 0.8;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li:nth-child(1){
+			background-color:#64AFFF;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li:nth-child(2){
+			left: 1%;
+			background-color:#FCFF89;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li:nth-child(3){
+			left: 1.5%;
+			background-color:#FF8D75;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li .cosmetic_txt_img2{
+			position: absolute;
+			width: 87px;
+			height: 17px;
+			left: 50%;
+			margin-left: -43.5px;
+			top:20%;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li .cos_txt_img1{
+			background: url(../img/cosmetic/cos_tab_txt2.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li .cos_txt_img2{
+			background: url(../img/cosmetic/cos_tab_txt3.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li .cos_txt_img4{
+			background: url(../img/cosmetic/cos_tab_txt1.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box2 nav ol li.cos_tab2_active{
+			top:10px;
+			opacity: 1;
+		}
+
+/*3번 탭버튼 ------------------------------------------------------------*/
+		.cos_modal_list_box3 nav{
+			width: 300px;
+			height: 50px;	
+			position: absolute;
+			top:1.9%;
+			left: 15%;
+			overflow: hidden;
+		}
+		.cos_modal_list_box3 nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.cos_modal_list_box3 nav ol li{
+			width: 30.1%;
+			height:100%;
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			text-align: center;
+			cursor: pointer;
+			transition: top 0.5s;
+			opacity: 0.8;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li:nth-child(1){
+			background-color:#FF9295;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li:nth-child(2){
+			left: 1%;
+			background-color:#AFB3FF;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li:nth-child(3){
+			left: 1.5%;
+			background-color:#EEFF6C;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li .cosmetic_txt_img3{
+			position: absolute;
+			width: 87px;
+			height: 17px;
+			left: 50%;
+			margin-left: -43.5px;
+			top:20%;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li .cos_txt_img1{
+			background: url(../img/cosmetic/cos_tab_txt2.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li .cos_txt_img2{
+			background: url(../img/cosmetic/cos_tab_txt3.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li .cos_txt_img4{
+			background: url(../img/cosmetic/cos_tab_txt1.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box3 nav ol li.cos_tab3_active{
+			top:10px;
+			opacity: 1;
+		}
+
+/*4번 탭버튼 ------------------------------------------------------------*/
+		.cos_modal_list_box4 nav{
+			width: 500px;
+			height: 50px;	
+			position: absolute;
+			top:1.9%;
+			left: 15%;
+			overflow: hidden;
+		}
+		.cos_modal_list_box4 nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.cos_modal_list_box4 nav ol li{
+			width: 24%;
+			height:100%;
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			text-align: center;
+			cursor: pointer;
+			transition: top 0.5s;
+			opacity: 0.8;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li:nth-child(1){
+			background-color:#81E7FF;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li:nth-child(2){
+			left: 1%;
+			background-color:#FFCCF4;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li:nth-child(3){
+			left: 1.5%;
+			background-color:#C5FF89;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li:nth-child(4){
+			left: 2%;
+			background-color:#E49019;
+		}
+		
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li .cosmetic_txt_img4{
+			position: absolute;
+			width: 87px;
+			height: 17px;
+			left: 50%;
+			margin-left: -43.5px;
+			top:20%;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li .cos_txt_img1{
+			background: url(../img/cosmetic/cos_tab_txt2.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li .cos_txt_img2{
+			background: url(../img/cosmetic/cos_tab_txt3.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li .cos_txt_img3{
+			background: url(../img/cosmetic/cos_tab_txt4.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li .cos_txt_img4{
+			background: url(../img/cosmetic/cos_tab_txt1.png) no-repeat;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box4 nav ol li.cos_tab4_active{
+			top:10px;
+			opacity: 1;
+		}						
+
+
+/*5번 탭버튼 ------------------------------------------------------------*/
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav{
+			width: 300px;
+			height: 50px;	
+			position: absolute;
+			top:1.9%;
+			left: 15%;
+			overflow: hidden;
+
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol li{
+			width: 31%;
+			height:100%;
+			display: block;
+			float: left;
+			position: relative;
+			margin: 0 2px 0 2px;
+			top: 18px;
+			text-align: center;
+			cursor: pointer;
+			transition: top 0.5s;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol li:nth-child(1){
+			background-color:#EEC4FF;
+			opacity: 0.8;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol li:nth-child(2){
+			left: 3.5%;
+			background-color:#FF9EBA;
+			opacity: 0.8;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol li .cos_txt_img1{
+			position: absolute;
+			width: 87px;
+			height: 17px;
+			left: 50%;
+			margin-left: -43.5px;
+			top:20%;
+			background: url(../img/cosmetic/cos_tab_txt2.png) no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol li .cos_txt_img4{
+			position: absolute;
+			width: 87px;
+			height: 17px;
+			left: 50%;
+			margin-left: -43.5px;
+			top:20%;
+			background: url(../img/cosmetic/cos_tab_txt1.png) no-repeat;
+		}
+		#wrapper>section:nth-child(6) .cos_modal_list_box5 nav ol li.cos_tab5_active{
+			top:10px;
+			opacity: 1;
+		}
+
+		.review_more{
+			width: 150px;
+			height: 86px;
+			position: absolute;
+			right: -2%;
+			top:1%;
+			background: url(../img/cosmetic/review_more.png) no-repeat center center;
+			background-size: contain;
+			cursor: pointer;
+			animation: reviewMore 2s infinite;
+		}
+		@keyframes reviewMore{
+			0%{background: url(../img/cosmetic/review_more.png) no-repeat center center;
+				background-size: contain;}
+			50%{background: url(../img/cosmetic/review_more_hover.png) no-repeat center center;
+				background-size: contain;}
+		}
+		
+		.review_more:hover{
+			width: 150px;
+			height: 86px;
+			background: url(../img/cosmetic/review_more_hover.png) no-repeat center center;
+			background-size: contain;
+		}
+
+		#review_see1{
+			width: 100%;
+			height: 10%;
+			position: absolute;
+			bottom: 35%;	
+		}
+
+/*모달창 닫기 버튼 -----*/
+		#wrapper>section:nth-child(6) .cos_Xbtn{
+			width: 58px;
+			height: 55px;
+			background: url(../img/cosmetic/cos_xbtn_01.png) no-repeat;
+			position: absolute;
+			right: -7%;
+			top:-7.5%;
+			display: block;
+			cursor: pointer;
+		}
+
+
+/*상단 클릭유도 안내글씨-----------------------------------*/
+		#wrapper>section:nth-child(6) .cos_txt{
+			width: 253px;
+			height: 23px;
+			position: absolute;
+			/*border:1px solid red;*/
+			/*left: 17%;*/
+			left: 50%;
+			margin-left:-630px; 
+			z-index: 99999999;
+			bottom:650px;
+			background: url(../img/cosmetic/cos_txt.png);
+			animation: costxt 2s  infinite;
+			}
+		@keyframes costxt{
+				0%{opacity:0 }
+				50%{opacity: 1}
+			}
+			
+		#wrapper>section:nth-child(6) .cos_cursor{
+			width: 78px;
+			height: 55px;
+			position: absolute;
+			/*border:1px solid red;*/
+			/*left: 28.5%;*/
+			left: 50%;
+			margin-left:-410px;
+			z-index: 99999999;
+			bottom:650px;
+			background: url(../img/cosmetic/handcursor.png);
+			animation: coscursor 1s steps(5) infinite;
+			}
+		@keyframes coscursor{
+				0%{}
+				100%{background-position: -390px;}
+			}
+
+/*//리뷰 쓰는거 */
+		#review_txt1_1{
+			height: 25px;
+			position: absolute;
+			left: 12%;
+			top:16%;
+			border-style: none;
+		}
+		#cos_select1{
+			position: absolute;
+			width: 100px;
+			height: 25px;
+			left: 12%;
+			top:21%;
+		}
+		#star1{
+			position: absolute;
+			width: 100px;
+			height: 25px;
+			left: 12%;
+			top:25.5%;
+		}
+		#cos_taste1{
+			position: absolute;
+			width: 110px;
+			height: 25px;
+			left: 12%;
+			top:29.8%;
+		}
+		#cos_taste2{
+			position: absolute;
+			width: 110px;
+			height: 25px;
+			left: 12%;
+			top:34.8%;
+		}
+		#cos_taste3{
+			position: absolute;
+			width: 110px;
+			height: 25px;
+			left: 12%;
+			top:40%;
+		}
+		
+		#review_file1{
+			position: absolute;
+			width: 500px;
+			height: 25px;
+			left: 12%;
+			top:45%;
+		}
+		#review_txt2_1{
+			position: absolute;
+			left: 3.5%;
+			bottom:10%;
+			border-style: none;
+		}
+		.review_done1{
+			width: 98px;
+			height: 32px;
+			position: absolute;
+			left: 50%;
+			margin-left: -49px;
+			bottom:3%;
+			cursor: pointer;
+			background: url(../img/riview/review_modal_done.png);
+		}
+		.review_done1:hover{
+			background: url(../img/riview/review_modal_done_hover.png);
+		}
+		.footer{
+			width:2023px;
+			height: 411px;
+			position: relative;
+			bottom: -87.1%;
+			left: 50%;
+			margin-left: -1011.5px;
+			background: url(../img/cosmetic/footer.png);
+			background-size: 100%;
+			z-index: 9999999999;
+			cursor: pointer;
+			transition: all 1s;
+		}
+		.footer:hover{
+			bottom:-60%;
+			background: url(../img/cosmetic/footer_hover.png);
+		}
+
+/*// 스크린창 1번 2번 3번-------------------------------------------------*/
+/*기본 모달창에 쓰는 스크린창---*/
+		 .screen_box{
+			width: 150%;
+			height: 1000px;
+			left:-20%;
+			top:0;
+			background-color: black;
+			opacity: 0.5;
+			position: absolute;
+			z-index:999999;	
+			cursor: pointer;		
+			}
+
+/*모달안에 모달에 쓰는 스크린창---*/
+		 .screen_box1{
+			width: 150%;
+			height: 1000px;
+			left:-20%;
+			top:0;
+			background-color: black;
+			opacity: 0.5;
+			position: absolute;
+			z-index: 9999991;	
+			cursor: pointer;		
+			}
+
+/*제품컨텐츠에 쓰는 스크린창---			*/
+		.screen_box2{
+			width: 150%;
+			height: 1000px;
+			left:-50%;
+			top:0;
+			background-color: black;
+			opacity: 0.5;
+			position: absolute;
+			z-index: 999999;	
+			cursor: pointer;
+		}

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>김현희_Burt'sbees</title>
+	<script src="https://kit.fontawesome.com/6cec0af3fc.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<link rel="icon" href="img/bee.ico" sizes="100x100" type="image/ico">
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+  	<link rel="stylesheet" href="css/mystyle_1.css">
+  	<script src="js/my_jquery1.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<!-- 메인섹션>>>_________________________ -->
+		<section id="home">home
+<!-- GNB--------------------------------------------------------- -->
+				<nav id="gnb">
+					<ul>
+						<li class="active">
+							<a href="#home"></a>
+							<div class="bee"></div>
+						</li>
+						<li>
+							<a href="#brand"></a>
+							<div class="bee"></div>
+						</li>
+						<li>
+							<a href="#ingredient"></a>
+							<div class="bee"></div>
+						</li>
+						<li>
+							<a href="#event"></a>
+							<div class="bee"></div>
+						</li>
+						<li>
+							<a href="#review"></a>
+							<div class="bee"></div>
+						</li>
+						<li>
+							<a href="#cosmetic"></a>
+							<div class="bee"></div>
+						</li>
+					</ul>
+				</nav>
+<!-- LNB------------------------------------------------------------- -->
+				<nav id="lnb">
+					<ul>
+						<li class="active">
+							<a href="#brand"></a>
+							<div class="honey"></div>
+						</li>
+						<li>
+							<a href="#ingredient"></a>
+							<div class="honey"></div>
+						</li>
+						<li>
+							<a href="#home"></a>
+						</li>
+						<li>
+							<a href="#event"></a>
+							<div class="honey"></div>
+						</li>
+						<li>
+							<a href="#review"></a>
+							<div class="honey"></div>
+						</li>
+						<li>
+							<a href="#cosmetic"></a>
+							<div class="honey"></div>
+						</li>
+					</ul>
+				</nav>
+<!-- main_carousel---------------------------------------------------------- -->
+			<div id="main_carousel_box">
+				<div id="main_carousel">
+					<ol class="main_gallery">
+						<li>
+							<a href="#cosmetic"></a>
+						</li>
+						<li>
+							<a href="#brand"></a>
+						</li>
+						<li>
+							<a href="#event"></a>
+						</li>
+						<li>
+							<a href="#review"></a>
+						</li>
+					</ol>
+				</div>	
+				<div class="main_left_btn mlb"></div>
+				<div class="main_right_btn mlb"></div>
+			</div>		
+<!-- 마우스 방향안내 이미지----------------------------------------->
+		<div class="scroll"></div>
+<!-- sns, 로그인,장바구니 --------------------------------------->
+		<div class="sns_box">
+			<div class="sns1 sns"></div>
+			<div class="sns2 sns"></div>
+			<div class="sns3 sns"></div>
+			<div class="rogin_bt sns"></div>
+			<div class="main_cart sns"></div>
+		</div>
+<!-- 로그인 모달창------------------------------------------------>
+		<div class="login_modal_box">
+			<div class="login_modal">
+				<input type="text" name="login" id="login" autofocus placeholder="  아이디를 입력 해 주세요.">
+				<input type="password" name="pas" id="pas" placeholder="  비밀번호를 입력 해 주세요.">
+				<div class="login_btn"></div>
+				<div class="sign_up_btn"></div>
+			</div>
+			<div class="login_Xbtn"></div>
+		</div>
+		<div class="screen screen_box"></div>
+
+<!-- 회원가입 모달창 ---------------------------------->
+		<div class="main_sign_up_modal_box">
+			<div class="main_sign_up_modal1">
+			<form action="#" method="post" class="main_sign_up_modal2">
+				<input type="text" name="log_in" id="id_check" autofocus placeholder="  희망하는 아이디를 입력 해 주세요.">
+				<input type="submit" id="overlap_check" value="중복확인">
+				<input type="password" name="sign_up_pas1" id="sign_up_pas" placeholder="대문자/소문자/특수기호를 포함한 8~12자리의 비밀번호를 입력 해 주세요.">
+				<input type="password" name="sign_up_pas2" id="pas_re_check" required placeholder="다시한번 입력 해 주세요.">
+				<input type="tel" id="phon_num" name="tel" placeholder="-는 빼고 기입 해 주세요" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+				<input type="submit" id="certification_tel" value="인증하기">
+				<input type="email" id="email" placeholder="이메일을 입력 해 주세요.">
+				<input type="submit" id="certification_e_mail" value="인증하기">
+				<input type="checkbox" id="agree1" value="yes1">
+				<input type="checkbox" id="agree2" value="yes2">
+			</form>
+			<div class="sign_up_btn2"></div>
+			</div>
+			<div class="sign_up_Xbtn"></div>
+		</div>
+		<div class="screen0 screen_box1"></div>
+		</section>
+
+	
+<!-- 브랜드 섹션>>>--------------------------------------- -->
+		<section id="brand">brand
+			<div class="b_board"></div>
+			<div class="brand_cha"></div>
+			<div class="brand_cursor"></div>
+			<div class="brand_cursor2"></div>
+
+<!-- 브랜드 캐로셀 --------------------------------------------- -->
+			<div id="brand_carousel_box">	
+				<div id="brand_carousel">
+					<ol class="brand_gallery">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ol>
+				</div>
+				<ol class="brand_btn_set">
+					<li class="brand_active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>	
+		</section>
+
+<!-- 성분섹션>>-------------------------------------------- -->
+		<section id="ingredient">ingredient
+			<div class="pomeranate active"></div>
+			<div class="mango"></div>
+			<div class="orange"></div>
+			<div class="lemon"></div>
+			<div class="shea_butter"></div>
+			<div class="bee_house"></div>
+			<div class="bee_flower"></div>
+			<div class="sunflower"></div>
+			<div class="lavender"></div>
+			<div class="ing_story1_tab">
+				<nav>
+					<ol>
+						<li class="ing_active">
+							<div class="tab_txt_box tab_txt1"></div>
+						</li>
+						<li><div class="tab_txt_box tab_txt2"></div></li>
+						<li><div class="tab_txt_box tab_txt3"></div></li>
+					</ol>
+				</nav>
+				<div class="ing_content1 ing_story1"></div>
+				<div class="ing_content1 ing_story1_2"></div>
+				<div class="ing_content1 ing_story1_3"></div>
+				<div class="ing_Tab_Xbtn"></div>
+			</div>
+			<div class="ing_modal_list_box">
+				<div class="ing_content ing_story2"></div>
+				<div class="ing_content ing_story3"></div>
+				<div class="ing_content ing_story4"></div>
+				<div class="ing_content ing_story5"></div>
+				<div class="ing_content ing_story6"></div>
+				<div class="ing_content ing_story7"></div>
+				<div class="ing_content ing_story8"></div>
+				<div class="ing_content ing_story9"></div>
+				<div class="ing_modal_Xbtn"></div>
+			</div>
+            <div class="mint"></div>
+			<div class="sub_ing_cha"></div>
+			<div class="tree_txt"></div>
+			<div class="fruit_txt"></div>
+			<div class="flower_txt"></div>
+			<div class="flower_bg"></div>
+			<div class="front_leafs"></div>
+			<div class="shaking_tree"></div>
+			<div class="ing_cha"></div>
+			<div class="hand_cursor_1 cursor_ing"></div>
+			<div class="hand_cursor_2 cursor_ing"></div>
+			<div class="hand_cursor_3 cursor_ing"></div>
+			<div class="screen1 screen_box"></div>	
+		</section>
+		    
+<!-- 이벤트 섹션>>------------------------------------- -->
+		<section id="event">event
+			<div class="event_cha"></div>
+			<div class="honey_box_01"></div>
+<!-- 올라오는 이벤트 박스안에 캐로셀. -->
+			<div class="honey_box_02">
+				<div id="event_carousel_box">
+					<div id="event_carousel">
+						<ol class="event_gallery">
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>
+					</div>	
+				<div class="event_side_bt event_left"></div>
+				<div class="event_side_bt eventright"></div>
+				</div>
+			</div>
+<!--이벤트 모달창1번 구현------------------------------------------->
+			<div class="event_modal_list_box">
+				<div class="event_modal_list">
+					<div id="event_carousel_box2">
+						<div id="event_carousel2">
+							<ol class="event_gallery2">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+						</div>
+						<ol class="event_btn_set1">
+							<li class="active"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>	
+						<div class="event_left_btn event_in"></div>
+						<div class="event_right_btn event_in"></div>
+					</div>
+					<div class="event_content event_story1"></div>
+					<div class="event_signUp_btn animate__animated animate__pulse"></div>
+					<div class="event_tab_box">
+						<nav>
+							<ol>
+								<li class="active"><div class="event_tab_img1"></div></li>
+								<li><div class="event_tab_img2"></div></li>
+							</ol>
+						</nav>
+						<div class="event_tab event_tab_story1"></div>
+						<div class="event_tab event_tab_story2">
+							<iframe class="event_in_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.6140766326835!2d127.00641081531157!3d37.56415527979841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca317e4ec77e9%3A0x371aad3c440c5ce!2z7ISc7Jq47Yq567OE7IucIOykkeq1rCDqtJHtnazrj5kg7Ye06rOE66GcIDMzNA!5e0!3m2!1sko!2skr!4v1599333474297!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" name="eventmap"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="event_modal_Xbtn"></div>
+			</div>
+<!--이벤트 모달창2,3번 구현------------------------------------------->		
+			<div class="event_modal_list_box2">
+				<div class="event_modal_list2">
+					<div class="event_content2 event_story2"></div>
+					<input type="text" placeholder="   url을 입력 해 주세요." id="event_url">
+					<div class="event_url_btn"></div>
+				</div>
+				<div class="event_modal_Xbtn2"></div>
+			</div>
+			<div class="event_modal_list_box3">
+				<div class="event_modal_list3">
+					<div class="event_story3"></div>
+				</div>
+				<div class="event_modal_Xbtn3"></div>
+			</div>
+			<div class="grand"></div>
+			<div class="smoke_man"></div>
+			<div class="hammer_man"></div>
+			<div class="open_man"></div>
+			<div class="shaking_man"></div>
+			<div class="running_man_box">
+			<div class="running_man"></div>
+			</div>
+			<div class="event_cha"></div>
+			<div class="screen3 screen_box"></div>
+		</section>
+
+<!-- 리뷰섹션>>>-------------------------------------- -->
+		<section id="review">review
+			<div class="bg_lamp"></div>
+			<div class="shop_01"></div>
+			<div class="door"></div>
+			<div class="sign"></div>
+			<div class="open animate__animated animate__swing animate__flipInY"></div>
+			<div class="neon"></div>
+			<div class="riview_cha"></div>
+			<div class="screen2 screen_box"></div>
+			<div class="movie_board">
+				<iframe width="462" height="260" src="https://www.youtube.com/embed/-OnMxVEjsno?mute=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="movie_bee"></iframe>
+				<div class="movie_board_box">
+					<div class="movie_board_btn"></div>
+				</div>
+			</div>
+  <!-- 리뷰 캐로셀--------------------------------------------- -->
+			<div id="review_carousel_box">
+				<div id="review_carousel">
+					<ol class="review_gallery">
+						<li></li>
+						<li></li>
+					</ol>
+				</div>	
+				<div class="brick_left"></div>
+				<div class="brick_right"></div>
+			</div>
+				<div class="review_modal_list">
+					<div class="review_content review_story1"></div>
+					<div class="review_content review_story2"></div>
+					<div class="review_modal_Xbtn"></div>
+					<div class="review_write_btn animate__animated animate__pulse"></div>
+				</div>
+				<div class="screen4 screen_box1"></div>	
+				<div class="review_modal_list2">
+				<select name="star_score" id="star">
+						<option value="5" selected>★★★★★</option>
+						<option value="4">★★★★☆</option>
+						<option value="3">★★★☆☆</option>
+						<option value="2">★★☆☆☆</option>
+						<option value="1">★☆☆☆☆</option>
+				</select><br>
+				<select name="cosmetic" id="cos_select">
+					<option value="body">바디앤헤어</option>
+					<option value="pet">펫케어</option>
+					<option value="skin">스킨케어</option>
+					<option value="cos">코스메틱</option>
+					<option value="mom_baby">엄마와아기</option>
+				</select><br>	
+					<input type="file" id="review_file">
+					<input type="text" size="35" id="review_txt1">
+					<textarea name="review" id="review_txt2" cols="65" rows="20" placeholder="남기실 리뷰 내용을 입력 해 주세요."></textarea><br><br>
+				<div class="review_done"></div>
+				<div class="review_modal_Xbtn2"></div>
+			</div>
+		</section>
+<!-- 제품섹션>>-------------------------------------- -->
+		<section id="cosmetic">cosmetic
+<!-- 제품 보여지는 박스들 -------------------------------------- -->
+			<nav class="cosmetic_box_01">
+				<ul>
+					<li>
+						<div class="best"></div>
+					</li>
+					<li>
+						<div class="mom_baby"></div>
+					</li>
+					<li>
+						<div class="skin_type"></div>
+					</li>
+				</ul>
+			</nav>
+			<nav class="cosmetic_box_02">
+				<ul>
+					<li>
+						<div class="cosmetic_item"></div>
+					</li>
+					<li>
+						<div class="pet_care"></div>
+					</li>
+				</ul>
+			</nav>
+<!-- 제품 모달 내용------------------------------------------>
+<!-- 탭컨텐츠 1번----------------------------------------------------------->
+			<div class="cos_tab_box cos_modal_list_box1">
+				<nav>
+					<ol>
+						<li class="cos_tab1_active">
+							<div class="cosmetic_txt_img1 cos_txt_img1"></div></li>
+						<li><div class="cosmetic_txt_img1 cos_txt_img2"></div></li>
+						<li><div class="cosmetic_txt_img1 cos_txt_img4"></div></li>
+					</ol>
+				</nav>
+				<div class="cos_tab_box_son cos_modal_list1">
+					<div class="cos_tab_contents cos_tab_contents1 cos_story1_1">
+						<div class="review_more review_more1"></div>
+					</div> 
+					<div class="cos_tab_contents cos_tab_contents1 cos_story1_2">
+						<div class="review_more review_more2"></div>
+					</div>
+					<div class="cos_tab_contents cos_tab_contents1 cos_story1_3_re">
+						<select name="star_score1" id="star1">
+							<option value="5" selected>★★★★★</option>
+							<option value="4">★★★★☆</option>
+							<option value="3">★★★☆☆</option>
+							<option value="2">★★☆☆☆</option>
+							<option value="1">★☆☆☆☆</option>
+						</select><br>
+							
+						<select name="taste1" id="cos_taste1">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>	
+
+						<select name="taste2" id="cos_taste2">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="taste3" id="cos_taste3">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="cosmetic1" id="cos_select1">
+							<option value="body">바디앤헤어</option>
+							<option value="pet">펫케어</option>
+							<option value="skin" selected>스킨케어</option>
+							<option value="cos">코스메틱</option>
+							<option value="mom_baby">엄마와아기</option>
+						</select><br>	
+						<input type="file" id="review_file1">
+						<input type="text" size="45" id="review_txt1_1">
+						<textarea name="review" id="review_txt2_1" cols="100" rows="20" placeholder="남기실 리뷰 내용을 입력 해 주세요."></textarea><br><br>
+						<div class="review_done1"></div>
+					</div> 
+				</div>  
+				<div class="cos_Xbtn cos_modal_Xbtn1"></div>
+			</div>
+
+<!-- 탭컨텐츠 2번----------------------------------------------------------->
+			<div class="cos_tab_box cos_modal_list_box2">
+				<nav>
+					<ol>
+						<li class="cos_tab2_active">
+							<div class="cosmetic_txt_img2 cos_txt_img1"></div></li>
+						<li><div class="cosmetic_txt_img2 cos_txt_img2"></div></li>
+						<li><div class="cosmetic_txt_img2 cos_txt_img4"></div></li>
+					</ol> 
+				</nav>
+				<div class="cos_tab_box_son cos_modal_list2">
+					<div class="cos_tab_contents cos_tab_contents2 cos_story2_1">
+						<div class="review_more review_more3"></div>
+					</div> 
+					<div class="cos_tab_contents cos_tab_contents2 cos_story2_2">
+						<div class="review_more review_more4"></div>
+					</div>
+					<div class="cos_tab_contents cos_tab_contents2 cos_story2_3_re">
+						<select name="star_score1" id="star1">
+							<option value="5" selected>★★★★★</option>
+							<option value="4">★★★★☆</option>
+							<option value="3">★★★☆☆</option>
+							<option value="2">★★☆☆☆</option>
+							<option value="1">★☆☆☆☆</option>
+						</select><br>
+							
+						<select name="taste1" id="cos_taste1">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>	
+
+						<select name="taste2" id="cos_taste2">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="taste3" id="cos_taste3">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="cosmetic1" id="cos_select1">
+							<option value="body">바디앤헤어</option>
+							<option value="pet">펫케어</option>
+							<option value="skin" selected>스킨케어</option>
+							<option value="cos">코스메틱</option>
+							<option value="mom_baby">엄마와아기</option>
+						</select><br>	
+						<input type="file" id="review_file1">
+						<input type="text" size="45" id="review_txt1_1">
+						<textarea name="review" id="review_txt2_1" cols="100" rows="20" placeholder="남기실 리뷰 내용을 입력 해 주세요."></textarea><br><br>
+						<div class="review_done1"></div>
+					</div> 
+				</div>  
+				<div class="cos_Xbtn cos_modal_Xbtn2"></div>
+			</div>
+
+<!-- 탭컨텐츠 3번----------------------------------------------------------->
+			<div class="cos_tab_box cos_modal_list_box3">
+				<nav>
+					<ol>
+						<li class="cos_tab3_active">
+							<div class="cosmetic_txt_img3 cos_txt_img1"></div></li>
+						<li><div class="cosmetic_txt_img3 cos_txt_img2"></div></li>
+						<li><div class="cosmetic_txt_img3 cos_txt_img4"></div></li>
+					</ol> 
+				</nav>
+				<div class="cos_tab_box_son cos_modal_list3">
+					<div class="cos_tab_contents cos_tab_contents3 cos_story3_1">
+						<div class="review_more review_more5"></div>
+					</div> 
+					<div class="cos_tab_contents cos_tab_contents3 cos_story3_2">
+						<div class="review_more review_more6"></div>
+					</div>
+					<div class="cos_tab_contents cos_tab_contents3 cos_story3_3_re">
+						<select name="star_score1" id="star1">
+							<option value="5" selected>★★★★★</option>
+							<option value="4">★★★★☆</option>
+							<option value="3">★★★☆☆</option>
+							<option value="2">★★☆☆☆</option>
+							<option value="1">★☆☆☆☆</option>
+						</select><br>
+							
+						<select name="taste1" id="cos_taste1">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>	
+
+						<select name="taste2" id="cos_taste2">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="taste3" id="cos_taste3">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="cosmetic1" id="cos_select1">
+							<option value="body">바디앤헤어</option>
+							<option value="pet">펫케어</option>
+							<option value="skin" selected>스킨케어</option>
+							<option value="cos">코스메틱</option>
+							<option value="mom_baby">엄마와아기</option>
+						</select><br>	
+						<input type="file" id="review_file1">
+						<input type="text" size="45" id="review_txt1_1">
+						<textarea name="review" id="review_txt2_1" cols="100" rows="20" placeholder="남기실 리뷰 내용을 입력 해 주세요."></textarea><br><br>
+						<div class="review_done1"></div>
+					</div> 
+				</div>  
+				<div class="cos_Xbtn cos_modal_Xbtn3"></div>
+			</div>
+
+<!-- 탭컨텐츠 4번----------------------------------------------------------->
+			<div class="cos_tab_box cos_modal_list_box4">
+				<nav>
+					<ol>
+						<li class="cos_tab4_active">
+							<div class="cosmetic_txt_img4 cos_txt_img1"></div>
+						</li>
+						<li><div class="cosmetic_txt_img4 cos_txt_img2"></div></li>
+						<li><div class="cosmetic_txt_img4 cos_txt_img3"></div></li>
+						<li><div class="cosmetic_txt_img4 cos_txt_img4"></div></li>
+					</ol> 
+				</nav>
+				<div class="cos_tab_box_son cos_modal_list4">
+					<div class="cos_tab_contents cos_tab_contents4 cos_story4_1">
+						<div class="review_more review_more7"></div>
+					</div> 
+					<div class="cos_tab_contents cos_tab_contents4 cos_story4_2">
+						<div class="review_more review_more8"></div>
+					</div>
+					<div class="cos_tab_contents cos_tab_contents4 cos_story4_3">
+						<div class="review_more review_more9"></div>
+					</div>
+					<div class="cos_tab_contents cos_tab_contents4 cos_story4_4_re">
+						<select name="star_score1" id="star1">
+							<option value="5" selected>★★★★★</option>
+							<option value="4">★★★★☆</option>
+							<option value="3">★★★☆☆</option>
+							<option value="2">★★☆☆☆</option>
+							<option value="1">★☆☆☆☆</option>
+						</select><br>
+							
+						<select name="taste1" id="cos_taste1">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>	
+
+						<select name="taste2" id="cos_taste2">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="taste3" id="cos_taste3">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="cosmetic1" id="cos_select1">
+							<option value="body">바디앤헤어</option>
+							<option value="pet">펫케어</option>
+							<option value="skin" selected>스킨케어</option>
+							<option value="cos">코스메틱</option>
+							<option value="mom_baby">엄마와아기</option>
+						</select><br>	
+						<input type="file" id="review_file1">
+						<input type="text" size="45" id="review_txt1_1">
+						<textarea name="review" id="review_txt2_1" cols="100" rows="20" placeholder="남기실 리뷰 내용을 입력 해 주세요."></textarea><br><br>
+						<div class="review_done1"></div>
+					</div> 
+				</div>  
+				<div class="cos_Xbtn cos_modal_Xbtn4"></div>
+			</div>
+
+<!-- 탭컨텐츠 5번----------------------------------------------------------->
+			<div class="cos_tab_box cos_modal_list_box5">
+				<nav>
+					<ol>
+						<li class="cos_tab5_active">
+							<div class="cos_txt_img1"></div></li>
+						<li><div class="cos_txt_img4"></div></li>
+					</ol>
+				</nav>
+				<div class="cos_tab_box_son cos_modal_list5">
+					<div class="cos_tab_contents cos_tab_contents5 cos_story5">
+						<div class="review_more review_more10"></div>
+					</div> 
+					<div class="cos_tab_contents cos_tab_contents5 cos_story5_re">
+						<select name="star_score1" id="star1">
+							<option value="5" selected>★★★★★</option>
+							<option value="4">★★★★☆</option>
+							<option value="3">★★★☆☆</option>
+							<option value="2">★★☆☆☆</option>
+							<option value="1">★☆☆☆☆</option>
+						</select><br>
+							
+						<select name="taste1" id="cos_taste1">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>	
+
+						<select name="taste2" id="cos_taste2">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="taste3" id="cos_taste3">
+							<option value="excellent" selected>아주만족해요.</option>
+							<option value="soso">보통이에요.</option>
+							<option value="notbad">나쁘진않아요.</option>
+							<option value="bad">별로예요.</option>
+						</select><br>
+
+						<select name="cosmetic1" id="cos_select1">
+							<option value="body">바디앤헤어</option>
+							<option value="pet">펫케어</option>
+							<option value="skin" selected>스킨케어</option>
+							<option value="cos">코스메틱</option>
+							<option value="mom_baby">엄마와아기</option>
+						</select><br>	
+						<input type="file" id="review_file1">
+						<input type="text" size="45" id="review_txt1_1">
+						<textarea name="review" id="review_txt2_1" cols="100" rows="20" placeholder="남기실 리뷰 내용을 입력 해 주세요."></textarea><br><br>
+						<div class="review_done1"></div>
+					</div> 
+				</div>  
+				<div class="cos_Xbtn cos_modal_Xbtn5"></div>
+			</div>  
+			<div class="star_01"></div>
+			<div class="shop_02"></div>
+			<div class="street_lamp"></div>
+			<div class="bg_lamp"></div>
+			<div class="cos_cha"></div>
+			<div class="cos_sub_cha"></div>
+			<div class="cos_txt"></div>
+			<div class="cos_cursor"></div>
+			<!-- <div class="qna"></div>
+			<div class="delivery"></div> -->
+			<div class="footer"></div>
+			<div class="screen5 screen_box2"></div>	
+
+		</section>
+	</div>  <!-- ---이거 지우면 구름커짐 -->
+	<!-- sticky 준 것>>---------------------------------- -->
+	<div class="main_parent">
+		<div class="main_cha"></div>
+	</div>
+	<!-- 오버플로우 히든준 것 >>>-------------------------------- -->
+	<div class="burt_parent">
+		<div class="burt"></div>
+	</div>
+	<div class="brand_cha_parent">
+		<div class="brand_cha"></div>
+	</div>
+	<div class="cloud_parent">
+		<div class="cloud"></div>
+	</div>
+</body>
+</html>
